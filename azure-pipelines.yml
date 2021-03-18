@@ -20,7 +20,7 @@ steps:
     unityProjectPath: 'CyclopsVR'
     outputPath: '$(Build.BinariesDirectory)'
     outputFileName: 'CyclopsVR_WIN'    
-    additionalCmdArgs: '-importPackage $(Build.Repository.LocalPath)/CyclopsVR/Plugins/Managed-PVR.dll'
+    additionalCmdArgs: '-importPackage $(Build.Repository.LocalPath)\CyclopsVR\Plugins\Managed-PVR.dll'
 
 - task: UnityTestTask@1
   inputs:
