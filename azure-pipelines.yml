@@ -11,9 +11,10 @@ pool:
  demands: Unity_2020.2.1f1
 
 steps:
+
 - task: UnityBuildTask@3
   inputs:
-    buildTarget: 'Win64'
+    buildTarget: 'standalone'
     unityEditorsPathMode: 'specify'
     customUnityEditorsPath: 'C:\Program Files'
     unityProjectPath: 'CyclopsVR'
