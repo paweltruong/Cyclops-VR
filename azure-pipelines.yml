@@ -1,0 +1,42 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- main
+
+pool:
+ name: Default
+ demands: Unity_2020.2.1f1
+
+steps:
+- task: UnityBuildTask@3
+  inputs:
+    buildTarget: 'Win64'
+    unityEditorsPathMode: 'specify'
+    customUnityEditorsPath: 'C:\Program Files'
+    unityProjectPath: 'CyclopsVR'
+    outputPath: '$(Build.BinariesDirectory)'
+    outputFileName: 'CyclopsVR_WIN'
+
+- task: UnityTestTask@1
+  inputs:
+    unityEditorsPathMode: 'specify'
+    customUnityEditorsPath: 'C:\Program Files'
+    unityProjectPath: 'CyclopsVR'
+    
+- task: ArchiveFiles@1
+  inputs:
+    rootFolderOrFile: '$(Build.BinariesDirectory)/CyclopsVR_WIN'
+    includeRootFolder: false
+    archiveType: 'zip'
+    archiveFile: '$(Build.ArtifactStagingDirectory)/CyclopsVR_WIN_$(Build.BuildId).zip'
+    replaceExistingArchive: true
+    
+- task: CopyFiles@1
+  inputs:
+    SourceFolder: '$(Build.ArtifactStagingDirectory)'
+    Contents: '*.zip'
+    TargetFolder: 'C:\Repos\official github\Cyclops-VR\Builds'
+    OverWrite: true
