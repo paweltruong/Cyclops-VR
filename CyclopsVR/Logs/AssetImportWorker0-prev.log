@@ -648,3 +648,56 @@ Received Import Request.
 Start importing Assets/Packages/Pimax/Plugins/Managed-PVR.dll using Guid(26fab30dde6de504182805baef30177f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '185cc4a271f974e8f588bc2a5f508d06') in 0.079898 seconds
   Import took 0.092814 seconds .
 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004057 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.63 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.638 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.63 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1465 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 84.0 MB.
+System memory in use after: 83.8 MB.
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 1945.
+Total: 5.660300 ms (FindLiveObjects: 2.133900 ms CreateObjectMapping: 0.303800 ms MarkObjects: 2.670000 ms  DeleteObjects: 0.550900 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006493 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Multiple plugins with the same name 'pvrunityrenderplugin' (found at 'Assets/Plugins/x86_64/pvrUnityRenderPlugin.dll' and 'Assets/Packages/Pimax/Plugins/x86_64/pvrUnityRenderPlugin.dll'). That means one or more plugins are set to be compatible with Editor. Only one plugin at the time can be used by Editor.
+
+Refreshing native plugins compatible for Editor in 0.76 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.228 seconds
+Platform modules already initialized, skipping
+Multiple plugins with the same name 'pvrunityrenderplugin' (found at 'Assets/Plugins/x86_64/pvrUnityRenderPlugin.dll' and 'Assets/Packages/Pimax/Plugins/x86_64/pvrUnityRenderPlugin.dll'). That means one or more plugins are set to be compatible with Editor. Only one plugin at the time can be used by Editor.
+
+Refreshing native plugins compatible for Editor in 0.92 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1466 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 84.1 MB.
+System memory in use after: 84.0 MB.
+
+Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 1947.
+Total: 4.525600 ms (FindLiveObjects: 0.852000 ms CreateObjectMapping: 0.131600 ms MarkObjects: 2.914600 ms  DeleteObjects: 0.625100 ms)
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file

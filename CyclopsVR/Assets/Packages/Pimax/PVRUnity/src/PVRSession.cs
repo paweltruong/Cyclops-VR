@@ -1,13 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System;
-using System.Runtime.InteropServices;
 
 namespace PVR
 {
     namespace Unity
     {
-        [DllImport("Managed-PVR")]
         public class PVRSession : MonoBehaviour
         {
             public enum TrackingOrig

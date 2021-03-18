@@ -95,12 +95,7 @@ namespace PVR
                         SystemInfo.graphicsDeviceVersion + ". Only Direct3D11 is currently supported.");
                     support = false;
                 }
-
-                if (!SystemInfo.supportsRenderTextures)
-                {
-                    Debug.LogError("[PVR-Unity] RenderLib not supported. RenderTexture (Unity Pro feature) is unavailable.");
-                    support = false;
-                }
+                
                 if (!IsUnityVersionSupported())
                 {
                     Debug.LogError("[PVR-Unity] RenderLib not supported. Unity 5.4+ is required for RenderManager support.");
