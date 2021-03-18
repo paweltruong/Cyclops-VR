@@ -592,3 +592,59 @@ Received Import Request.
 Start importing Assets/Packages/Pimax/Plugins.plugin/Managed-PVR.dll using Guid(26fab30dde6de504182805baef30177f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4329f065b9c13df74f972c785563f826') in 0.083671 seconds
   Import took 0.106793 seconds .
 
+========================================================================
+Received Import Request.
+  Time since last request: 1650.409825 seconds.
+  path: Assets/Packages/Pimax/Plugins.plugin/x86_64/pvrUnityRenderPlugin.dll
+  artifactKey: Guid(70c4b581488a60145b92ebc4ffd57b84) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Packages/Pimax/Plugins.plugin/x86_64/pvrUnityRenderPlugin.dll using Guid(70c4b581488a60145b92ebc4ffd57b84) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1edb1231a88d6865ae1e27606d1b8f1d') in 0.027903 seconds
+  Import took 0.031930 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 70.287942 seconds.
+  path: Assets/Packages/Pimax/LeapMotion/Core/Plugins/x86_64/LeapC.dll
+  artifactKey: Guid(b85077ce944c96f43b8818ed57d1888d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Packages/Pimax/LeapMotion/Core/Plugins/x86_64/LeapC.dll using Guid(b85077ce944c96f43b8818ed57d1888d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ae8cd778a285ed702b6cf3849d952e3') in 0.023081 seconds
+  Import took 0.027510 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 12.435733 seconds.
+  path: Assets/Packages/Pimax/Plugins/x86_64/pvrUnityRenderPlugin.dll
+  artifactKey: Guid(70c4b581488a60145b92ebc4ffd57b84) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Packages/Pimax/Plugins/x86_64/pvrUnityRenderPlugin.dll using Guid(70c4b581488a60145b92ebc4ffd57b84) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fec1a087f4e8a4c88cdfdb04bc277830') in 0.014280 seconds
+  Import took 0.018274 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 39.828958 seconds.
+  path: Assets/Packages/Pimax/Plugins/x86_64/pvrUnityRenderPlugin.dll
+  artifactKey: Guid(70c4b581488a60145b92ebc4ffd57b84) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Packages/Pimax/Plugins/x86_64/pvrUnityRenderPlugin.dll using Guid(70c4b581488a60145b92ebc4ffd57b84) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8a22e3267bfb4bd8fe3c453b7fef15e9') in 0.025082 seconds
+  Import took 0.029902 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.143038 seconds.
+  path: Assets/Packages/Pimax/Plugins/x86/pvrUnityRenderPlugin.dll
+  artifactKey: Guid(afc6747a0c8dfe24e84885588be854b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Packages/Pimax/Plugins/x86/pvrUnityRenderPlugin.dll using Guid(afc6747a0c8dfe24e84885588be854b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b06ef5adddfb548eb816ab86f3df9d1b') in 0.019494 seconds
+  Import took 0.024413 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.856135 seconds.
+  path: Assets/Packages/Pimax/Plugins/x86/pvrUnityRenderPlugin.dll
+  artifactKey: Guid(afc6747a0c8dfe24e84885588be854b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Packages/Pimax/Plugins/x86/pvrUnityRenderPlugin.dll using Guid(afc6747a0c8dfe24e84885588be854b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'acc40e2c427d69a4765ee241c8835eb3') in 0.019679 seconds
+  Import took 0.025029 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 16.061998 seconds.
+  path: Assets/Packages/Pimax/Plugins/Managed-PVR.dll
+  artifactKey: Guid(26fab30dde6de504182805baef30177f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Packages/Pimax/Plugins/Managed-PVR.dll using Guid(26fab30dde6de504182805baef30177f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '185cc4a271f974e8f588bc2a5f508d06') in 0.079898 seconds
+  Import took 0.092814 seconds .
+
