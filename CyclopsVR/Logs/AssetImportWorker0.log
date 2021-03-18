@@ -483,3 +483,56 @@ Received Import Request.
 Start importing Assets/Packages/Pimax/Plugins/x86_64/pvrUnityRenderPlugin.dll using Guid(70c4b581488a60145b92ebc4ffd57b84) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0681b9b3647f9137363e4e25f02f5d4b') in 0.017150 seconds
   Import took 0.023042 seconds .
 
+========================================================================
+Received Import Request.
+  Time since last request: 479.147756 seconds.
+  path: Assets/Packages/Pimax/PVRUnity/src/PVR.asmdef
+  artifactKey: Guid(2c51a840a7b09944ca9815fd6e2c00c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Packages/Pimax/PVRUnity/src/PVR.asmdef using Guid(2c51a840a7b09944ca9815fd6e2c00c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2004230009ec06e4a55c0189bb26f567') in 0.016351 seconds
+  Import took 0.021513 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.025416 seconds.
+  path: Assets/Packages/Pimax/PVRUnity/src/PVR.asmdef
+  artifactKey: Guid(2c51a840a7b09944ca9815fd6e2c00c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Packages/Pimax/PVRUnity/src/PVR.asmdef using Guid(2c51a840a7b09944ca9815fd6e2c00c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2004230009ec06e4a55c0189bb26f567') in 0.009503 seconds
+  Import took 0.014092 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006172 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.98 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+System.IO.IOException: Sharing violation on path Temp/RoslynAnalysisRunner\Assembly-CSharp.dll
+  at System.IO.File.Delete (System.String path) [0x00073] in <9577ac7a62ef43179789031239ba8798>:0 
+  at System.IO.Directory.RecursiveDelete (System.String path) [0x0003f] in <9577ac7a62ef43179789031239ba8798>:0 
+  at System.IO.Directory.Delete (System.String path, System.Boolean recursive) [0x00009] in <9577ac7a62ef43179789031239ba8798>:0 
+  at UnityEditor.Scripting.ScriptCompilation.RoslynAnalysisRunner.Terminate () [0x00033] in <1e441e8684a14fe4b8f8a926d91afc3a>:0 
+  at UnityEditor.Scripting.ScriptCompilation.RoslynAnalysisRunner.CheckShouldRun () [0x00034] in <1e441e8684a14fe4b8f8a926d91afc3a>:0 
+  at UnityEditor.Scripting.ScriptCompilation.RoslynAnalysisRunner..cctor () [0x0004d] in <1e441e8684a14fe4b8f8a926d91afc3a>:0 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+Mono: successfully reloaded assembly
+- Completed reload, in  4.546 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.81 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1465 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 83.7 MB.
+System memory in use after: 83.6 MB.
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 1941.
+Total: 4.162400 ms (FindLiveObjects: 0.416700 ms CreateObjectMapping: 0.251000 ms MarkObjects: 3.015400 ms  DeleteObjects: 0.477600 ms)
+
