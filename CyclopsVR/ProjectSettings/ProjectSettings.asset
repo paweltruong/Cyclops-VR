@@ -576,7 +576,7 @@ PlayerSettings:
   scriptingDefineSymbols: {}
   additionalCompilerArguments:
     1:
-    - -reference:Assets/Plugins/Managed-PVR.dll
+    - -r:"C:\Repos\official github\Cyclops-VR\CyclopsVR\Assets\Plugins\Managed-PVR.dll"
   platformArchitecture: {}
   scriptingBackend: {}
   il2cppCompilerConfiguration: {}
