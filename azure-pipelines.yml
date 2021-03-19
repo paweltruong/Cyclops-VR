@@ -23,11 +23,11 @@ steps:
     outputPath: '$(Build.BinariesDirectory)'
     outputFileName: 'CyclopsVR_WIN'
 
-- task: UnityTestTask@1
-  inputs:
-    unityEditorsPathMode: 'specify'
-    customUnityEditorsPath: 'C:\Program Files'
-    unityProjectPath: 'CyclopsVR'
+#- task: UnityTestTask@1
+#  inputs:
+#    unityEditorsPathMode: 'specify'
+#    customUnityEditorsPath: 'C:\Program Files'
+#    unityProjectPath: 'CyclopsVR'
     
 - task: ArchiveFiles@1
   inputs:
