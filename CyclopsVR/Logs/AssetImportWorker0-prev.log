@@ -15,11 +15,11 @@ C:/Repos/official github/Cyclops-VR/CyclopsVR
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-50259
+53415
 Successfully changed project path to: C:/Repos/official github/Cyclops-VR/CyclopsVR
 C:/Repos/official github/Cyclops-VR/CyclopsVR
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 50.88 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 61.30 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.2.1f1 (270dd8c3da1c)
 [Subsystems] Discovering subsystems at path C:/Program Files/2020.2.1f1/Editor/Data/Resources/UnitySubsystems
@@ -35,250 +35,58 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/2020.2.1f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/2020.2.1f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56792
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56492
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/2020.2.1f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/2020.2.1f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.004231 seconds.
+Registered in 0.005258 seconds.
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 45.55 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 54.20 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.977 seconds
+- Completed reload, in  2.282 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.003323 seconds.
+Registered in 0.003641 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.45 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.54 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.459 seconds
+- Completed reload, in  1.737 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
-Refreshing native plugins compatible for Editor in 0.44 ms, found 2 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
+Refreshing native plugins compatible for Editor in 0.57 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1391 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 65.5 MB.
-System memory in use after: 65.4 MB.
+Unloading 1474 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 68.6 MB.
+System memory in use after: 68.5 MB.
 
-Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 1824.
-Total: 2.580900 ms (FindLiveObjects: 0.303500 ms CreateObjectMapping: 0.075300 ms MarkObjects: 1.815300 ms  DeleteObjects: 0.385500 ms)
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 1907.
+Total: 3.288700 ms (FindLiveObjects: 0.388400 ms CreateObjectMapping: 0.088700 ms MarkObjects: 2.402300 ms  DeleteObjects: 0.407400 ms)
 
 ========================================================================
 Received Import Request.
-  path: Assets/Packages/Pimax/PVRUnity/Prefabs
-  artifactKey: Guid(e39951a78c469494896c8d63ba3085f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Packages/Pimax/PVRUnity/Prefabs using Guid(e39951a78c469494896c8d63ba3085f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a2aad2661e616b40f92ad3c764a576bd') in 0.013675 seconds
-  Import took 0.016776 seconds .
+  path: Assets/Packages/Pimax/PVRUnity/src/DLLSearchPathFixer.cs
+  artifactKey: Guid(730122cf47f18944a9ffc1046469ac1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Packages/Pimax/PVRUnity/src/DLLSearchPathFixer.cs using Guid(730122cf47f18944a9ffc1046469ac1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '612456055d699dcb2c3f9c6574a67fba') in 0.054348 seconds
+  Import took 0.058148 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.003648 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.53 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.468 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.56 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1389 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 65.5 MB.
-System memory in use after: 65.4 MB.
-
-Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 1832.
-Total: 2.925600 ms (FindLiveObjects: 0.321200 ms CreateObjectMapping: 0.081400 ms MarkObjects: 1.997900 ms  DeleteObjects: 0.523500 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003630 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.49 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.564 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 1.04 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1389 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 65.6 MB.
-System memory in use after: 65.5 MB.
-
-Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 1834.
-Total: 3.144700 ms (FindLiveObjects: 0.405000 ms CreateObjectMapping: 0.087400 ms MarkObjects: 2.202600 ms  DeleteObjects: 0.446800 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.005413 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.48 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.498 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.51 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1389 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 65.7 MB.
-System memory in use after: 65.6 MB.
-
-Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 1836.
-Total: 3.156000 ms (FindLiveObjects: 0.356800 ms CreateObjectMapping: 0.082500 ms MarkObjects: 2.327100 ms  DeleteObjects: 0.387400 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003434 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.49 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.555 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.52 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1389 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 65.8 MB.
-System memory in use after: 65.7 MB.
-
-Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 1838.
-Total: 3.287600 ms (FindLiveObjects: 0.373200 ms CreateObjectMapping: 0.084700 ms MarkObjects: 2.345300 ms  DeleteObjects: 0.482700 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 1314.081132 seconds.
-  path: Assets/Packages/Pimax/LeapMotion/Modules/Hands/Hand Assets/Default Leap Hand.fbx
-  artifactKey: Guid(559ae9534f56ab44d8ca6f83ae53cba5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Packages/Pimax/LeapMotion/Modules/Hands/Hand Assets/Default Leap Hand.fbx using Guid(559ae9534f56ab44d8ca6f83ae53cba5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '91b2bc8205e34960b81725b9047f52fd') in 0.168550 seconds
-  Import took 0.172923 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.909132 seconds.
-  path: Assets/Packages/Pimax/LeapMotion/Modules/Hands/Hand Assets/Generic Hand
-  artifactKey: Guid(0c9a2317ef18b704d9646e79e4e7b6f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Packages/Pimax/LeapMotion/Modules/Hands/Hand Assets/Generic Hand using Guid(0c9a2317ef18b704d9646e79e4e7b6f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cad61b584eef403ec91bec0b8bdcad68') in 0.020079 seconds
-  Import took 0.023969 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.727276 seconds.
-  path: Assets/Packages/Pimax/LeapMotion/Modules/Hands/Hand Assets/Generic Hand/Generic Hand.fbx
-  artifactKey: Guid(4577231256ebec149ac8882d93c98cda) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Packages/Pimax/LeapMotion/Modules/Hands/Hand Assets/Generic Hand/Generic Hand.fbx using Guid(4577231256ebec149ac8882d93c98cda) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a32be61592ac307b8a9589a8e99a4bd1') in 0.328615 seconds
-  Import took 0.334306 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003903 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.49 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.711 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.64 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1390 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 80.7 MB.
-System memory in use after: 80.5 MB.
-
-Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 1852.
-Total: 3.473500 ms (FindLiveObjects: 0.428700 ms CreateObjectMapping: 0.076700 ms MarkObjects: 2.565700 ms  DeleteObjects: 0.400600 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 134.772875 seconds.
-  path: Assets/Packages/Pimax/LeapMotion/Modules/Hands/Hand Assets/Generic Hand/GenericHandTransparencyMap.png
-  artifactKey: Guid(e911cba1eec0c364681095f165f68321) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Packages/Pimax/LeapMotion/Modules/Hands/Hand Assets/Generic Hand/GenericHandTransparencyMap.png using Guid(e911cba1eec0c364681095f165f68321) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '92ed8b3bb32b0484532932d3b14e3ecc') in 0.164729 seconds
-  Import took 0.169022 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 7.979590 seconds.
-  path: Assets/Packages/Pimax/LeapMotion/Modules/Hands/Hand Assets/Generic Hand/GenericHandShader.shader
-  artifactKey: Guid(c5b35a4c19d643f4f87637cdd8587b98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Packages/Pimax/LeapMotion/Modules/Hands/Hand Assets/Generic Hand/GenericHandShader.shader using Guid(c5b35a4c19d643f4f87637cdd8587b98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '32e5c54e755970c4be6995257df146bc') in 0.027353 seconds
-  Import took 0.031997 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.208644 seconds.
-  path: Assets/Packages/Pimax/LeapMotion/Modules/Hands/Hand Assets/Generic Hand/GenericHandShader.shader
-  artifactKey: Guid(c5b35a4c19d643f4f87637cdd8587b98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Packages/Pimax/LeapMotion/Modules/Hands/Hand Assets/Generic Hand/GenericHandShader.shader using Guid(c5b35a4c19d643f4f87637cdd8587b98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '32e5c54e755970c4be6995257df146bc') in 0.011366 seconds
-  Import took 0.019797 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.004713 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.53 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.584 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.50 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1465 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 83.0 MB.
-System memory in use after: 82.8 MB.
-
-Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 1931.
-Total: 3.568900 ms (FindLiveObjects: 0.579600 ms CreateObjectMapping: 0.170400 ms MarkObjects: 2.372500 ms  DeleteObjects: 0.443400 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.004602 seconds.
+Registered in 0.005958 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
@@ -288,416 +96,37 @@ Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  3.272 seconds
+- Completed reload, in  2.965 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.69 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.84 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1465 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 83.1 MB.
-System memory in use after: 83.0 MB.
+Unloading 1468 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 68.5 MB.
+System memory in use after: 68.4 MB.
 
-Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 1933.
-Total: 4.313500 ms (FindLiveObjects: 0.790700 ms CreateObjectMapping: 0.174200 ms MarkObjects: 2.881100 ms  DeleteObjects: 0.465900 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 1354.809472 seconds.
-  path: Assets/Packages/Pimax/PVRUnity
-  artifactKey: Guid(89fd777178d6c364dbc33d5e244360b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Packages/Pimax/PVRUnity using Guid(89fd777178d6c364dbc33d5e244360b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '348e4964cf6c874a1e48fcaae59de2f9') in 0.090025 seconds
-  Import took 0.095118 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.005485 seconds.
-  path: Assets/Packages/Pimax/PVRUnity/src
-  artifactKey: Guid(850695068c8796945b1cd9b8d797557d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Packages/Pimax/PVRUnity/src using Guid(850695068c8796945b1cd9b8d797557d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bafb5e28f34fb6c20cc737fca637acf5') in 0.020995 seconds
-  Import took 0.040125 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.163623 seconds.
-  path: Assets/Packages/Pimax/PVRUnity/src/Math.cs
-  artifactKey: Guid(a8819056262a604418d06dc03fce7d7d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Packages/Pimax/PVRUnity/src/Math.cs using Guid(a8819056262a604418d06dc03fce7d7d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '863886f8e1ec6101cb5eb3a0b822777b') in 0.027535 seconds
-  Import took 0.031677 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.030614 seconds.
-  path: Assets/Packages/Pimax/PVRUnity/src/Math.cs
-  artifactKey: Guid(a8819056262a604418d06dc03fce7d7d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Packages/Pimax/PVRUnity/src/Math.cs using Guid(a8819056262a604418d06dc03fce7d7d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '863886f8e1ec6101cb5eb3a0b822777b') in 0.009024 seconds
-  Import took 0.013516 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 72.747802 seconds.
-  path: Assets/Packages/Pimax/Plugins/Managed-PVR.dll
-  artifactKey: Guid(26fab30dde6de504182805baef30177f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Packages/Pimax/Plugins/Managed-PVR.dll using Guid(26fab30dde6de504182805baef30177f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a51eae137a312d30f7f6c02888de1929') in 0.024580 seconds
-  Import took 0.030265 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.002903 seconds.
-  path: Assets/Packages/Pimax/Plugins/Managed-PVR.dll
-  artifactKey: Guid(26fab30dde6de504182805baef30177f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Packages/Pimax/Plugins/Managed-PVR.dll using Guid(26fab30dde6de504182805baef30177f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a51eae137a312d30f7f6c02888de1929') in 0.007777 seconds
-  Import took 0.011602 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 151.095776 seconds.
-  path: Assets/Packages/Pimax/Plugins
-  artifactKey: Guid(0e6815aa3d13bc844b491496cb3cf4cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Packages/Pimax/Plugins using Guid(0e6815aa3d13bc844b491496cb3cf4cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1609a94ea0bd87660b7b58bf9821bcdf') in 0.023262 seconds
-  Import took 0.028294 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 7.743954 seconds.
-  path: Assets/Packages/Pimax/Plugins/NewAssemblyReference.asmref
-  artifactKey: Guid(3bd97cafb187441448230a7644faf652) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Packages/Pimax/Plugins/NewAssemblyReference.asmref using Guid(3bd97cafb187441448230a7644faf652) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0225bb9f908894fcc3032734089c6296') in 0.022801 seconds
-  Import took 0.029202 seconds .
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 1909.
+Total: 16.105100 ms (FindLiveObjects: 0.869600 ms CreateObjectMapping: 0.410700 ms MarkObjects: 14.302900 ms  DeleteObjects: 0.519600 ms)
 
 ========================================================================
 Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.005530 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.61 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 5.85 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.120 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.57 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1465 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 83.2 MB.
-System memory in use after: 83.1 MB.
+Unloading 12 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 39.9 MB.
+System memory in use after: 39.8 MB.
 
-Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 1935.
-Total: 9.037800 ms (FindLiveObjects: 0.892000 ms CreateObjectMapping: 0.278700 ms MarkObjects: 7.291700 ms  DeleteObjects: 0.572200 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 52.768708 seconds.
-  path: Assets/Packages/Pimax/PVRUnity/src/PVR.asmdef
-  artifactKey: Guid(2c51a840a7b09944ca9815fd6e2c00c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Packages/Pimax/PVRUnity/src/PVR.asmdef using Guid(2c51a840a7b09944ca9815fd6e2c00c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a9f917e8644c86d78dc4c625b571dfae') in 0.214336 seconds
-  Import took 0.221151 seconds .
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 1909.
+Total: 8.325800 ms (FindLiveObjects: 1.563200 ms CreateObjectMapping: 0.161400 ms MarkObjects: 5.669200 ms  DeleteObjects: 0.929300 ms)
 
 ========================================================================
 Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003883 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.79 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 4.11 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.485 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.63 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1465 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 83.4 MB.
-System memory in use after: 83.2 MB.
+Unloading 12 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 40.1 MB.
+System memory in use after: 40.0 MB.
 
-Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 1937.
-Total: 6.878600 ms (FindLiveObjects: 0.925400 ms CreateObjectMapping: 0.110000 ms MarkObjects: 5.245900 ms  DeleteObjects: 0.594700 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003730 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.51 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.581 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.57 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1465 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 83.5 MB.
-System memory in use after: 83.3 MB.
-
-Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 1939.
-Total: 3.794200 ms (FindLiveObjects: 0.419600 ms CreateObjectMapping: 0.083400 ms MarkObjects: 2.759800 ms  DeleteObjects: 0.529400 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 352.128861 seconds.
-  path: Assets/Packages/Pimax/Plugins/x86_64
-  artifactKey: Guid(6d3eaf5651806fd4c848fa17402853fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Packages/Pimax/Plugins/x86_64 using Guid(6d3eaf5651806fd4c848fa17402853fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '40a1cbdb615caabfee71e73af5a6d813') in 0.027112 seconds
-  Import took 0.031549 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000665 seconds.
-  path: Assets/Packages/Pimax/Plugins/x86_64
-  artifactKey: Guid(6d3eaf5651806fd4c848fa17402853fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Packages/Pimax/Plugins/x86_64 using Guid(6d3eaf5651806fd4c848fa17402853fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '40a1cbdb615caabfee71e73af5a6d813') in 0.008171 seconds
-  Import took 0.012337 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.077753 seconds.
-  path: Assets/Packages/Pimax/Plugins/x86
-  artifactKey: Guid(13a1419c39256ea4288b6c26d2d89ede) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Packages/Pimax/Plugins/x86 using Guid(13a1419c39256ea4288b6c26d2d89ede) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ec2af7da7aa9871601307147984424b6') in 0.025735 seconds
-  Import took 0.031287 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.201678 seconds.
-  path: Assets/Packages/Pimax/Plugins/x86/pvrUnityRenderPlugin.dll
-  artifactKey: Guid(afc6747a0c8dfe24e84885588be854b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Packages/Pimax/Plugins/x86/pvrUnityRenderPlugin.dll using Guid(afc6747a0c8dfe24e84885588be854b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a2eb3749529b08442420f86ea6bab8b') in 0.015785 seconds
-  Import took 0.020339 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 63.580091 seconds.
-  path: Assets/Packages/Pimax/Plugins/x86_64/pvrUnityRenderPlugin.dll
-  artifactKey: Guid(70c4b581488a60145b92ebc4ffd57b84) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Packages/Pimax/Plugins/x86_64/pvrUnityRenderPlugin.dll using Guid(70c4b581488a60145b92ebc4ffd57b84) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0681b9b3647f9137363e4e25f02f5d4b') in 0.017150 seconds
-  Import took 0.023042 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 479.147756 seconds.
-  path: Assets/Packages/Pimax/PVRUnity/src/PVR.asmdef
-  artifactKey: Guid(2c51a840a7b09944ca9815fd6e2c00c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Packages/Pimax/PVRUnity/src/PVR.asmdef using Guid(2c51a840a7b09944ca9815fd6e2c00c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2004230009ec06e4a55c0189bb26f567') in 0.016351 seconds
-  Import took 0.021513 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.025416 seconds.
-  path: Assets/Packages/Pimax/PVRUnity/src/PVR.asmdef
-  artifactKey: Guid(2c51a840a7b09944ca9815fd6e2c00c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Packages/Pimax/PVRUnity/src/PVR.asmdef using Guid(2c51a840a7b09944ca9815fd6e2c00c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2004230009ec06e4a55c0189bb26f567') in 0.009503 seconds
-  Import took 0.014092 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.006172 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.98 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-System.IO.IOException: Sharing violation on path Temp/RoslynAnalysisRunner\Assembly-CSharp.dll
-  at System.IO.File.Delete (System.String path) [0x00073] in <9577ac7a62ef43179789031239ba8798>:0 
-  at System.IO.Directory.RecursiveDelete (System.String path) [0x0003f] in <9577ac7a62ef43179789031239ba8798>:0 
-  at System.IO.Directory.Delete (System.String path, System.Boolean recursive) [0x00009] in <9577ac7a62ef43179789031239ba8798>:0 
-  at UnityEditor.Scripting.ScriptCompilation.RoslynAnalysisRunner.Terminate () [0x00033] in <1e441e8684a14fe4b8f8a926d91afc3a>:0 
-  at UnityEditor.Scripting.ScriptCompilation.RoslynAnalysisRunner.CheckShouldRun () [0x00034] in <1e441e8684a14fe4b8f8a926d91afc3a>:0 
-  at UnityEditor.Scripting.ScriptCompilation.RoslynAnalysisRunner..cctor () [0x0004d] in <1e441e8684a14fe4b8f8a926d91afc3a>:0 
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogError (object)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
-
-Mono: successfully reloaded assembly
-- Completed reload, in  4.546 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.81 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1465 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 83.7 MB.
-System memory in use after: 83.6 MB.
-
-Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 1941.
-Total: 4.162400 ms (FindLiveObjects: 0.416700 ms CreateObjectMapping: 0.251000 ms MarkObjects: 3.015400 ms  DeleteObjects: 0.477600 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 246.117065 seconds.
-  path: Assets/Plugins/Managed-PVR.dll
-  artifactKey: Guid(26fab30dde6de504182805baef30177f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Plugins/Managed-PVR.dll using Guid(26fab30dde6de504182805baef30177f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8e0358981e96955dee697f766c497c5e') in 0.036568 seconds
-  Import took 0.053025 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003823 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.61 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  3.017 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 1.06 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1465 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 83.8 MB.
-System memory in use after: 83.7 MB.
-
-Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 1943.
-Total: 100.532000 ms (FindLiveObjects: 9.263900 ms CreateObjectMapping: 0.439100 ms MarkObjects: 70.888100 ms  DeleteObjects: 19.937900 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 28.321809 seconds.
-  path: Assets/Packages/Pimax/PVRUnity/src/PVRSession.cs
-  artifactKey: Guid(7602a2c7f99ac3d4bb33ac74277f4ca0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Packages/Pimax/PVRUnity/src/PVRSession.cs using Guid(7602a2c7f99ac3d4bb33ac74277f4ca0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '99a01463294f94db9a57258a3289cf4f') in 0.023825 seconds
-  Import took 0.029705 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.060726 seconds.
-  path: Assets/Packages/Pimax/PVRUnity/src/PVRSession.cs
-  artifactKey: Guid(7602a2c7f99ac3d4bb33ac74277f4ca0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Packages/Pimax/PVRUnity/src/PVRSession.cs using Guid(7602a2c7f99ac3d4bb33ac74277f4ca0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '99a01463294f94db9a57258a3289cf4f') in 0.016327 seconds
-  Import took 0.021421 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 641.104238 seconds.
-  path: Assets/Packages/Pimax/Plugins.plugin/Managed-PVR.dll
-  artifactKey: Guid(26fab30dde6de504182805baef30177f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Packages/Pimax/Plugins.plugin/Managed-PVR.dll using Guid(26fab30dde6de504182805baef30177f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4329f065b9c13df74f972c785563f826') in 0.083671 seconds
-  Import took 0.106793 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1650.409825 seconds.
-  path: Assets/Packages/Pimax/Plugins.plugin/x86_64/pvrUnityRenderPlugin.dll
-  artifactKey: Guid(70c4b581488a60145b92ebc4ffd57b84) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Packages/Pimax/Plugins.plugin/x86_64/pvrUnityRenderPlugin.dll using Guid(70c4b581488a60145b92ebc4ffd57b84) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1edb1231a88d6865ae1e27606d1b8f1d') in 0.027903 seconds
-  Import took 0.031930 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 70.287942 seconds.
-  path: Assets/Packages/Pimax/LeapMotion/Core/Plugins/x86_64/LeapC.dll
-  artifactKey: Guid(b85077ce944c96f43b8818ed57d1888d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Packages/Pimax/LeapMotion/Core/Plugins/x86_64/LeapC.dll using Guid(b85077ce944c96f43b8818ed57d1888d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ae8cd778a285ed702b6cf3849d952e3') in 0.023081 seconds
-  Import took 0.027510 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 12.435733 seconds.
-  path: Assets/Packages/Pimax/Plugins/x86_64/pvrUnityRenderPlugin.dll
-  artifactKey: Guid(70c4b581488a60145b92ebc4ffd57b84) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Packages/Pimax/Plugins/x86_64/pvrUnityRenderPlugin.dll using Guid(70c4b581488a60145b92ebc4ffd57b84) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fec1a087f4e8a4c88cdfdb04bc277830') in 0.014280 seconds
-  Import took 0.018274 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 39.828958 seconds.
-  path: Assets/Packages/Pimax/Plugins/x86_64/pvrUnityRenderPlugin.dll
-  artifactKey: Guid(70c4b581488a60145b92ebc4ffd57b84) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Packages/Pimax/Plugins/x86_64/pvrUnityRenderPlugin.dll using Guid(70c4b581488a60145b92ebc4ffd57b84) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8a22e3267bfb4bd8fe3c453b7fef15e9') in 0.025082 seconds
-  Import took 0.029902 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.143038 seconds.
-  path: Assets/Packages/Pimax/Plugins/x86/pvrUnityRenderPlugin.dll
-  artifactKey: Guid(afc6747a0c8dfe24e84885588be854b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Packages/Pimax/Plugins/x86/pvrUnityRenderPlugin.dll using Guid(afc6747a0c8dfe24e84885588be854b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b06ef5adddfb548eb816ab86f3df9d1b') in 0.019494 seconds
-  Import took 0.024413 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 10.856135 seconds.
-  path: Assets/Packages/Pimax/Plugins/x86/pvrUnityRenderPlugin.dll
-  artifactKey: Guid(afc6747a0c8dfe24e84885588be854b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Packages/Pimax/Plugins/x86/pvrUnityRenderPlugin.dll using Guid(afc6747a0c8dfe24e84885588be854b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'acc40e2c427d69a4765ee241c8835eb3') in 0.019679 seconds
-  Import took 0.025029 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 16.061998 seconds.
-  path: Assets/Packages/Pimax/Plugins/Managed-PVR.dll
-  artifactKey: Guid(26fab30dde6de504182805baef30177f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Packages/Pimax/Plugins/Managed-PVR.dll using Guid(26fab30dde6de504182805baef30177f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '185cc4a271f974e8f588bc2a5f508d06') in 0.079898 seconds
-  Import took 0.092814 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.004057 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.63 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.638 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.63 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1465 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 84.0 MB.
-System memory in use after: 83.8 MB.
-
-Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 1945.
-Total: 5.660300 ms (FindLiveObjects: 2.133900 ms CreateObjectMapping: 0.303800 ms MarkObjects: 2.670000 ms  DeleteObjects: 0.550900 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.006493 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Multiple plugins with the same name 'pvrunityrenderplugin' (found at 'Assets/Plugins/x86_64/pvrUnityRenderPlugin.dll' and 'Assets/Packages/Pimax/Plugins/x86_64/pvrUnityRenderPlugin.dll'). That means one or more plugins are set to be compatible with Editor. Only one plugin at the time can be used by Editor.
-
-Refreshing native plugins compatible for Editor in 0.76 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.228 seconds
-Platform modules already initialized, skipping
-Multiple plugins with the same name 'pvrunityrenderplugin' (found at 'Assets/Plugins/x86_64/pvrUnityRenderPlugin.dll' and 'Assets/Packages/Pimax/Plugins/x86_64/pvrUnityRenderPlugin.dll'). That means one or more plugins are set to be compatible with Editor. Only one plugin at the time can be used by Editor.
-
-Refreshing native plugins compatible for Editor in 0.92 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1466 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 84.1 MB.
-System memory in use after: 84.0 MB.
-
-Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 1947.
-Total: 4.525600 ms (FindLiveObjects: 0.852000 ms CreateObjectMapping: 0.131600 ms MarkObjects: 2.914600 ms  DeleteObjects: 0.625100 ms)
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 1909.
+Total: 3.698300 ms (FindLiveObjects: 0.402800 ms CreateObjectMapping: 0.085200 ms MarkObjects: 2.788100 ms  DeleteObjects: 0.420100 ms)
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
