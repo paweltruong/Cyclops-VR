@@ -11,6 +11,8 @@ pool:
  demands: Unity_2020.2.1f1
 
 steps:
+- checkout: self  # self represents the repo where the initial Pipelines YAML file was found
+  lfs: true
 
 - task: UnityBuildTask@3
   inputs:
