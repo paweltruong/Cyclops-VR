@@ -7,10 +7,14 @@
     "com.unity.polybrush": "1.0.2",
     "com.unity.probuilder": "4.4.0",
     "com.unity.progrids": "3.0.3-preview.6",
+    "com.unity.render-pipelines.universal": "10.2.2",
     "com.unity.test-framework": "1.1.19",
     "com.unity.textmeshpro": "3.0.1",
     "com.unity.timeline": "1.4.4",
     "com.unity.ugui": "1.0.0",
+    "com.unity.xr.magicleap": "6.0.0",
+    "com.unity.xr.management": "4.0.1",
+    "com.valvesoftware.unity.openvr": "file:C:/temp/unity/com.valvesoftware.unity.openvr-1.1.4/com.valvesoftware.unity.openvr-1.1.4/package",
     "com.unity.modules.ai": "1.0.0",
     "com.unity.modules.androidjni": "1.0.0",
     "com.unity.modules.animation": "1.0.0",
@@ -42,5 +46,15 @@
     "com.unity.modules.vr": "1.0.0",
     "com.unity.modules.wind": "1.0.0",
     "com.unity.modules.xr": "1.0.0"
-  }
+  },
+  "scopedRegistries": [
+    {
+      "name": "Valve",
+      "url": "https://registry.npmjs.org/",
+      "scopes": [
+        "com.valvesoftware",
+        "com.valvesoftware.openvr"
+      ]
+    }
+  ]
 }
