@@ -575,8 +575,7 @@ PlayerSettings:
   webGLDecompressionFallback: 0
   scriptingDefineSymbols: {}
   additionalCompilerArguments:
-    1:
-    - -r:"Assets\Plugins\Managed-PVR.dll"
+    1: []
   platformArchitecture: {}
   scriptingBackend: {}
   il2cppCompilerConfiguration: {}
