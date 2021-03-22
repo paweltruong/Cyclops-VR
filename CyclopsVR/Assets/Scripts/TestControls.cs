@@ -49,8 +49,8 @@ public class TestControls : MonoBehaviour
 
         if (xrInput != null)
         {
-            xrInput.TrySetTrackingOriginMode(TrackingOriginModeFlags.Device);
-            xrInput.TryRecenter();
+            //xrInput.TrySetTrackingOriginMode(TrackingOriginModeFlags.Device);
+            //xrInput.TryRecenter();
         }
 
         var xrMesh = xrLoader.GetLoadedSubsystem<XRMeshSubsystem>();
