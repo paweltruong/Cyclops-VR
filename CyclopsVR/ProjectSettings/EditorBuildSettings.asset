@@ -9,6 +9,8 @@ EditorBuildSettings:
     path: Assets/Scenes/CorridorScene.unity
     guid: e36af3bda2b7acc48bfbf1fd883ec26c
   m_configObjects:
+    Unity.XR.Oculus.Settings: {fileID: 11400000, guid: d1a5a4fa7386c3d47a0ff1cc7031108b, type: 2}
     Unity.XR.OpenVR.Settings: {fileID: 11400000, guid: dda04f86840505a41bfe92a67e94d81c, type: 2}
+    Unity.XR.WindowsMR.Settings: {fileID: 11400000, guid: 820d58406bcde434fad160fa5d1e1976, type: 2}
     com.unity.xr.magicleap.magic_leap_settings: {fileID: 11400000, guid: e526b52da96025d44ab268961daf653a, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: f399a0bd70d461f49a00de214a8eb8eb, type: 2}

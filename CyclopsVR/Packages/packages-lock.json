@@ -219,6 +219,27 @@
       },
       "url": "https://packages.unity.com"
     },
+    "com.unity.xr.oculus": {
+      "version": "1.6.1",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.xr.management": "3.2.16",
+        "com.unity.ugui": "1.0.0"
+      },
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.xr.windowsmr": {
+      "version": "4.2.1",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.xr.management": "3.2.16",
+        "com.unity.xr.interactionsubsystems": "1.0.1",
+        "com.unity.xr.arsubsystems": "4.0.1"
+      },
+      "url": "https://packages.unity.com"
+    },
     "com.valvesoftware.unity.openvr": {
       "version": "file:C:/temp/unity/com.valvesoftware.unity.openvr-1.1.4/com.valvesoftware.unity.openvr-1.1.4/package",
       "depth": 0,
