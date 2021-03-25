@@ -8,7 +8,7 @@ trigger:
 
 pool:
  name: Default
- demands: Unity_2020.2.1f1
+ demands: Unity_2019.3.10f1
 
 steps:
 - checkout: self  # self represents the repo where the initial Pipelines YAML file was found
@@ -16,12 +16,12 @@ steps:
 
 - task: UnityBuildTask@3
   inputs:
-    buildTarget: 'Win64'
+    buildTarget: 'Android'
     unityEditorsPathMode: 'specify'
     customUnityEditorsPath: 'C:\Program Files'
     unityProjectPath: 'CyclopsVR'
     outputPath: '$(Build.BinariesDirectory)'
-    outputFileName: 'CyclopsVR_WIN'
+    outputFileName: 'CyclopsVR_Android'
 
 #- task: UnityTestTask@1
 #  inputs:
@@ -31,10 +31,10 @@ steps:
     
 - task: ArchiveFiles@1
   inputs:
-    rootFolderOrFile: '$(Build.BinariesDirectory)/CyclopsVR_WIN'
+    rootFolderOrFile: '$(Build.BinariesDirectory)/CyclopsVR_Android'
     includeRootFolder: false
     archiveType: 'zip'
-    archiveFile: '$(Build.ArtifactStagingDirectory)/CyclopsVR_WIN_$(Build.BuildId).zip'
+    archiveFile: '$(Build.ArtifactStagingDirectory)/CyclopsVR_Android_$(Build.BuildId).zip'
     replaceExistingArchive: true
     
 - task: CopyFiles@1
