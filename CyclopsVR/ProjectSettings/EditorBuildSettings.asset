@@ -5,9 +5,12 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/CorridorScene.unity
     guid: e36af3bda2b7acc48bfbf1fd883ec26c
+  - enabled: 1
+    path: Assets/Scenes/CorridorSceneCardboard.unity
+    guid: 33cef40dc910f1949980d2dc156892ba
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: d1a5a4fa7386c3d47a0ff1cc7031108b, type: 2}
     Unity.XR.OpenVR.Settings: {fileID: 11400000, guid: dda04f86840505a41bfe92a67e94d81c, type: 2}
