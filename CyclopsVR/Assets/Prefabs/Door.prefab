@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2639002933357918865}
   - component: {fileID: 2639002933357918867}
   - component: {fileID: 2639002933357918864}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LampShortT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -90,7 +90,7 @@ GameObject:
   - component: {fileID: 2639002933594313647}
   - component: {fileID: 2639002933594313641}
   - component: {fileID: 2639002933594313646}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LampShortT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -169,7 +169,7 @@ GameObject:
   - component: {fileID: 2639002934059185830}
   - component: {fileID: 2639002934059185824}
   - component: {fileID: 2639002934059185825}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LampShortB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -248,7 +248,7 @@ GameObject:
   - component: {fileID: 2639002934859705651}
   - component: {fileID: 1933974510772129246}
   - component: {fileID: 2675563187656966230}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -310,7 +310,7 @@ GameObject:
   - component: {fileID: 2639002935150462505}
   - component: {fileID: 2639002935150462507}
   - component: {fileID: 2639002935150462504}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall03SidingSmallL (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -391,7 +391,7 @@ GameObject:
   - component: {fileID: 870335302622823910}
   - component: {fileID: 8164757738939744208}
   - component: {fileID: 2482471361416790825}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall01DoorFrame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -473,7 +473,7 @@ GameObject:
   - component: {fileID: 8288787725709719066}
   - component: {fileID: 1034902376211057708}
   - component: {fileID: 6728447460744589525}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DoorWing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -552,7 +552,7 @@ GameObject:
   - component: {fileID: 7240886034770596575}
   - component: {fileID: 1812643612699764969}
   - component: {fileID: 5339937272656712720}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DoorFrame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -631,7 +631,7 @@ GameObject:
   - component: {fileID: 7036256901369409973}
   - component: {fileID: 2089328142959020931}
   - component: {fileID: 5747228140145964922}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall03SidingSmallL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -712,7 +712,7 @@ GameObject:
   - component: {fileID: 2491566796125896253}
   - component: {fileID: 5480115430281209786}
   - component: {fileID: 5959895104936156536}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DoorWing (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -791,7 +791,7 @@ GameObject:
   - component: {fileID: 5956683467358302760}
   - component: {fileID: 3454650908659042334}
   - component: {fileID: 8993103352016516327}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LampShortB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
