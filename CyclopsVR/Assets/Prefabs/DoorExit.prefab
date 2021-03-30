@@ -1053,6 +1053,7 @@ GameObject:
   - component: {fileID: 8717584133735034903}
   - component: {fileID: 3355298754774514608}
   - component: {fileID: 7450860572069939845}
+  - component: {fileID: 8820926481422301215}
   m_Layer: 8
   m_Name: DoorFrame (1)
   m_TagString: Untagged
@@ -1148,3 +1149,16 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -3409887539960168014, guid: 8e1b019c576b740418367422149171bb, type: 3}
+--- !u!114 &8820926481422301215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8717584133735034901}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b747ff07d2a44714099901ae3be01e48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  roomName: <room name>

@@ -14,15 +14,20 @@ public class Reticle : MonoBehaviour
     [SerializeField] float minSize = 10f;
     [SerializeField] float maxSize = 30f;
     [SerializeField] float transitionDuration = .4f;
+    [SerializeField] WorldUI worldUI;
 
     Ray lastRay;
     RaycastHit lastHit;
+    Interactable lastTarget;
     bool targetAquired = false;
 
     private void Start()
     {
         if (reticleOutline == null || reticleFill == null)
             Debug.LogError("Reticles not set");
+
+        if (worldUI == null)
+            Debug.LogError("UI not set");
 
         if (mainCamera == null)
             Debug.LogError("Camera is not set");
@@ -62,12 +67,24 @@ public class Reticle : MonoBehaviour
             //shrink
             StartCoroutine(Transition2(false));
             targetAquired = false;
+            if(lastTarget != null)
+            {
+                lastTarget.Untargeted();
+                worldUI.Hide();
+            }
+            lastTarget = null;            
         }
         if (!targetAquired && result)
         {
             //grow
             StartCoroutine(Transition2(true));
             targetAquired = true;
+            lastTarget = lastHit.collider.gameObject.GetComponent<Interactable>();
+            if (lastTarget != null)
+            {
+                lastTarget?.Targeted();
+                worldUI.Show(mainCamera, lastTarget);
+            }
         }
     }
 
