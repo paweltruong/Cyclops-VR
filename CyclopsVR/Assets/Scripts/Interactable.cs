@@ -5,7 +5,11 @@ using UnityEngine;
 [ExecuteInEditMode]
 public class Interactable : MonoBehaviour
 {
+    [SerializeField] bool isUnavailable = true;
+
     protected bool isTargeted;
+
+    public bool IsUnavailable => isUnavailable;
     
     public virtual void Targeted()
     {

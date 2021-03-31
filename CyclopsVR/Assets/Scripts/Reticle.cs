@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class Reticle : MonoBehaviour
@@ -19,7 +20,17 @@ public class Reticle : MonoBehaviour
     Ray lastRay;
     RaycastHit lastHit;
     Interactable lastTarget;
+    XRUIElement lastUIElement;
     bool targetAquired = false;
+    RectTransform rect;
+
+    GraphicRaycaster m_Raycaster;
+
+    private void Awake()
+    {
+        m_Raycaster = GetComponent<GraphicRaycaster>();
+        rect = GetComponent<RectTransform>();
+    }
 
     private void Start()
     {
@@ -59,6 +70,8 @@ public class Reticle : MonoBehaviour
         var result = Physics.Raycast(ray, out hitInfo, maxDistance, layerMask);
         lastHit = hitInfo;
 
+        CastGraphicRay(mainCamera);
+
 #if UNITY_EDITOR        
         Debug.DrawRay(rayPointerStart, rayOrigin.forward * maxDistance, result ? Color.green : Color.red);
 #endif
@@ -67,12 +80,12 @@ public class Reticle : MonoBehaviour
             //shrink
             StartCoroutine(Transition2(false));
             targetAquired = false;
-            if(lastTarget != null)
+            if (lastTarget != null)
             {
                 lastTarget.Untargeted();
                 worldUI.Hide();
             }
-            lastTarget = null;            
+            lastTarget = null;
         }
         if (!targetAquired && result)
         {
@@ -85,6 +98,51 @@ public class Reticle : MonoBehaviour
                 lastTarget?.Targeted();
                 worldUI.Show(mainCamera, lastTarget);
             }
+        }
+    }
+
+    void CastGraphicRay(Camera camera)
+    {
+        var m_EventSystem = EventSystem.current;
+        //Set up the new Pointer Event
+        var m_PointerEventData = new PointerEventData(m_EventSystem);
+
+        //camera.Sc.WorldToScreenPoint(hit.point);
+        //m_PointerEventData.position = Input.mousePosition;
+        //camera.Sc
+        //Debug.Log(Input.mousePosition);
+        //Debug.Log($"tpos:{transform.position}, tlpos:{transform.localPosition}, trecpos:{rect.position}, trlpos:{rect.localPosition}, cw2s:{camera.WorldToScreenPoint(transform.position)}");
+
+
+        //Set the Pointer Event Position to that of the game object
+        m_PointerEventData.position = camera.WorldToScreenPoint(this.transform.position);
+
+        //Create a list of Raycast Results
+        List<RaycastResult> results = new List<RaycastResult>();
+
+        //Raycast using the Graphics Raycaster and mouse click position
+        m_Raycaster.Raycast(m_PointerEventData, results);
+        //Debug.Log($"GRay:{m_PointerEventData.position}");
+
+        if (results.Count > 0) Debug.Log("Hit " + results[0].gameObject.name);
+
+        EventSystem.current.RaycastAll(m_PointerEventData, results);
+        if (results.Count > 0)
+        {
+            Debug.Log($"Hit2:{results[0].gameObject.name}");
+
+            if (lastUIElement == null || lastUIElement.gameObject != results[0].gameObject)
+            {
+                EventSystem.current.SetSelectedGameObject(results[0].gameObject);
+                lastUIElement = results[0].gameObject.GetComponent<XRUIElement>();
+                lastUIElement?.Select();
+                Debug.Log($"State:{(lastUIElement as XRUIButton)?.State}");
+            }
+        }
+        else
+        {
+            lastUIElement?.Deselect();
+            lastUIElement = null;
         }
     }
 

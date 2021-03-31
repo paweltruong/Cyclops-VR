@@ -23,9 +23,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.35"
-     inkscape:cx="400"
-     inkscape:cy="560"
+     inkscape:zoom="0.7"
+     inkscape:cx="123.39052"
+     inkscape:cy="1298.0239"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      inkscape:document-rotation="0"
@@ -61,8 +61,121 @@
        ry="25.704298" />
     <path
        id="path835"
-       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:8.00001;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 357.14258,214 a 255.99999,255.99999 0 0 0 -256,256 255.99999,255.99999 0 0 0 256,256 255.99999,255.99999 0 0 0 256,-256 255.99999,255.99999 0 0 0 -256,-256 z m 0,64 a 192,192 0 0 1 192,192 192,192 0 0 1 -192,192 192,192 0 0 1 -192,-192 192,192 0 0 1 192,-192 z"
-       transform="scale(0.26458333)" />
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:2.11667;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m -39.309598,186.64464 a 67.73333,67.73333 0 0 0 -67.733332,67.73333 67.73333,67.73333 0 0 0 67.733332,67.73334 67.73333,67.73333 0 0 0 67.733332,-67.73334 67.73333,67.73333 0 0 0 -67.733332,-67.73333 z m 0,16.93334 a 50.799999,50.799999 0 0 1 50.799999,50.79999 50.799999,50.799999 0 0 1 -50.799999,50.8 50.799999,50.799999 0 0 1 -50.8,-50.8 50.799999,50.799999 0 0 1 50.8,-50.79999 z"
+       inkscape:export-filename="C:\Repos\official github\Cyclops-VR\CyclopsVR\Assets\Graphics\Reticle.png"
+       inkscape:export-xdpi="133.91"
+       inkscape:export-ydpi="133.91" />
+    <circle
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:2.11667;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path852"
+       cx="296.71133"
+       cy="58.586311"
+       r="67.73333"
+       inkscape:export-filename="C:\Repos\official github\Cyclops-VR\CyclopsVR\Assets\Graphics\ReticleFilled.png"
+       inkscape:export-xdpi="133.91"
+       inkscape:export-ydpi="133.91" />
+    <rect
+       style="fill:#ffffff;stroke-width:2.11667;stroke-linecap:round;stroke-linejoin:round;stroke:#000000;stroke-opacity:1"
+       id="rect841"
+       width="135.46666"
+       height="135.46666"
+       x="-72.571426"
+       y="-21.166666"
+       ry="25.704298"
+       inkscape:export-filename="C:\Repos\official github\Cyclops-VR\CyclopsVR\Assets\Graphics\Background.png"
+       inkscape:export-xdpi="133.91"
+       inkscape:export-ydpi="133.91" />
+    <rect
+       style="fill:#ffffff;stroke-width:2.11667;stroke-linecap:round;stroke-linejoin:round;stroke:#000000;stroke-opacity:1"
+       id="rect843"
+       width="135.46666"
+       height="135.46666"
+       x="-72.571426"
+       y="-21.166666"
+       ry="25.704298"
+       inkscape:export-filename="C:\Repos\official github\Cyclops-VR\CyclopsVR\Assets\Graphics\Background.png"
+       inkscape:export-xdpi="133.91"
+       inkscape:export-ydpi="133.91" />
+    <rect
+       style="fill:#ffffff;stroke:#000000;stroke-width:2.11667;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+       id="rect845"
+       width="135.46666"
+       height="135.46666"
+       x="-167.8215"
+       y="-188.15654"
+       ry="4.178647"
+       inkscape:export-filename="C:\Repos\official github\Cyclops-VR\CyclopsVR\Assets\Graphics\Background02.png"
+       inkscape:export-xdpi="133.91"
+       inkscape:export-ydpi="133.91" />
+    <path
+       id="path847"
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:2.11667;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 269.87493,185.13274 a 67.73333,67.73333 0 0 0 -67.73334,67.73333 67.73333,67.73333 0 0 0 67.73334,67.73334 67.73333,67.73333 0 0 0 67.73333,-67.73334 67.73333,67.73333 0 0 0 -67.73333,-67.73333 z m 0,16.93334 a 50.799999,50.799999 0 0 1 50.79999,50.79999 50.799999,50.799999 0 0 1 -50.79999,50.8 50.799999,50.799999 0 0 1 -50.8,-50.8 50.799999,50.799999 0 0 1 50.8,-50.79999 z"
+       inkscape:export-filename="C:\Repos\official github\Cyclops-VR\CyclopsVR\Assets\Graphics\Reticle.png"
+       inkscape:export-xdpi="133.91"
+       inkscape:export-ydpi="133.91" />
+    <path
+       id="rect849"
+       style="fill:#ffffff;stroke:none;stroke-width:8.00001;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+       d="M 938.57031 835 L 938.57031 1076.4277 L 1101.4277 1076.4277 L 1101.4277 835 L 938.57031 835 z M 966.23047 942.91797 A 12.796308 12.796308 0 0 1 966.25977 942.91797 A 12.796308 12.796308 0 0 1 979.05664 955.71484 A 12.796308 12.796308 0 0 1 966.25977 968.51172 A 12.796308 12.796308 0 0 1 953.46289 955.71484 A 12.796308 12.796308 0 0 1 966.23047 942.91797 z M 966.26172 949.70312 A 6.0103824 6.0103824 0 0 0 960.25 955.71484 A 6.0103824 6.0103824 0 0 0 966.26172 961.72461 A 6.0103824 6.0103824 0 0 0 972.27148 955.71484 A 6.0103824 6.0103824 0 0 0 966.26172 949.70312 z "
+       transform="scale(0.26458333)"
+       inkscape:export-filename="C:\Repos\official github\Cyclops-VR\CyclopsVR\Assets\Graphics\Icon_Door.png"
+       inkscape:export-xdpi="133.91"
+       inkscape:export-ydpi="133.91" />
+    <circle
+       style="fill:#090909;fill-opacity:1;stroke:none;stroke-width:0.155915;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="circle855"
+       cx="120.95241"
+       cy="203.72916"
+       r="4.9892821"
+       inkscape:export-filename="C:\Repos\official github\Cyclops-VR\CyclopsVR\Assets\Graphics\ReticleFilled.png"
+       inkscape:export-xdpi="133.91"
+       inkscape:export-ydpi="133.91" />
+    <circle
+       style="fill:#aaaaaa;fill-opacity:1;stroke:none;stroke-width:0.0732327;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="circle857"
+       cx="120.95241"
+       cy="203.72916"
+       r="2.3434489"
+       inkscape:export-filename="C:\Repos\official github\Cyclops-VR\CyclopsVR\Assets\Graphics\ReticleFilled.png"
+       inkscape:export-xdpi="133.91"
+       inkscape:export-ydpi="133.91" />
+    <path
+       id="circle863"
+       style="fill:#090909;fill-opacity:1;stroke:none;stroke-width:0.155915;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 122.54465,228.07255 a 4.989282,4.989282 0 0 0 -4.97799,4.98936 4.989282,4.989282 0 0 0 4.98936,4.98935 4.989282,4.989282 0 0 0 4.98936,-4.98935 4.989282,4.989282 0 0 0 -4.98936,-4.98936 4.989282,4.989282 0 0 0 -0.0114,0 z m 0.0114,2.64583 a 2.3434488,2.3434488 0 0 1 2.34353,2.34353 2.3434488,2.3434488 0 0 1 -2.34353,2.34352 2.3434488,2.3434488 0 0 1 -2.34353,-2.34352 2.3434488,2.3434488 0 0 1 2.34353,-2.34353 z" />
+    <path
+       id="path871"
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:2.11667;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 116.50857,254.26383 a 67.73333,67.73333 0 0 0 -67.73333,67.73332 67.73333,67.73333 0 0 0 67.73333,67.73334 67.73333,67.73333 0 0 0 67.73333,-67.73334 67.73333,67.73333 0 0 0 -67.73333,-67.73332 z m 0,16.93333 a 50.799999,50.799999 0 0 1 50.8,50.79999 50.799999,50.799999 0 0 1 -50.8,50.8 50.799999,50.799999 0 0 1 -50.799998,-50.8 50.799999,50.799999 0 0 1 50.799998,-50.79999 z"
+       inkscape:export-filename="C:\Repos\official github\Cyclops-VR\CyclopsVR\Assets\Graphics\Reticle.png"
+       inkscape:export-xdpi="133.91"
+       inkscape:export-ydpi="133.91" />
+    <path
+       id="path873"
+       style="fill:#a7a7a7;fill-opacity:1;stroke:none;stroke-width:2.72639;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 116.50859,234.75315 a 87.244005,87.244005 0 0 0 -87.244029,87.24402 87.244005,87.244005 0 0 0 87.244029,87.244 87.244005,87.244005 0 0 0 87.24399,-87.244 87.244005,87.244005 0 0 0 -87.24399,-87.24402 z m 0,21.81101 a 65.433004,65.433004 0 0 1 65.43299,65.43301 65.433004,65.433004 0 0 1 -65.43299,65.43298 65.433004,65.433004 0 0 1 -65.433029,-65.43298 65.433004,65.433004 0 0 1 65.433029,-65.43301 z"
+       inkscape:export-filename="C:\Repos\official github\Cyclops-VR\CyclopsVR\Assets\Graphics\Reticle.png"
+       inkscape:export-xdpi="133.91"
+       inkscape:export-ydpi="133.91" />
+    <path
+       id="path877"
+       style="fill:#999999;fill-opacity:1;stroke:none;stroke-width:2.11667;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 145.64092,52.637821 a 65.433003,65.433003 0 0 0 -65.433217,65.432699 65.433003,65.433003 0 0 0 65.433217,65.43322 65.433003,65.433003 0 0 0 65.43269,-65.43322 65.433003,65.433003 0 0 0 -65.43269,-65.432699 z m 0,14.6327 a 50.799999,50.799999 0 0 1 50.8,50.799999 50.799999,50.799999 0 0 1 -50.8,50.8 50.799999,50.799999 0 0 1 -50.800006,-50.8 50.799999,50.799999 0 0 1 50.800006,-50.799999 z" />
+    <path
+       id="path882"
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.63224;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 145.64092,67.270521 a 52.231698,52.231698 0 0 0 -52.231702,52.231699 52.231698,52.231698 0 0 0 52.231702,52.2317 52.231698,52.231698 0 0 0 52.2317,-52.2317 52.231698,52.231698 0 0 0 -52.2317,-52.231699 z m 0,13.05793 a 39.173775,39.173775 0 0 1 39.17377,39.173769 39.173775,39.173775 0 0 1 -39.17377,39.17377 39.173775,39.173775 0 0 1 -39.17378,-39.17377 39.173775,39.173775 0 0 1 39.17378,-39.173769 z"
+       inkscape:export-filename="C:\Repos\official github\Cyclops-VR\CyclopsVR\Assets\Graphics\Reticle.png"
+       inkscape:export-xdpi="133.91"
+       inkscape:export-ydpi="133.91" />
+    <path
+       id="path884"
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:2.11667;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m -53.294717,307.92732 a 65.433003,65.433003 0 0 0 -65.433223,65.4327 65.433003,65.433003 0 0 0 65.433223,65.43321 65.433003,65.433003 0 0 0 65.4327,-65.43321 65.433003,65.433003 0 0 0 -65.4327,-65.4327 z m 0,13.20126 a 52.231697,52.231697 0 0 1 52.2314199,52.23144 52.231697,52.231697 0 0 1 -52.2314199,52.23195 52.231697,52.231697 0 0 1 -52.231943,-52.23195 52.231697,52.231697 0 0 1 52.231943,-52.23144 z"
+       inkscape:export-filename="C:\Repos\official github\Cyclops-VR\CyclopsVR\Assets\Graphics\ReticleInsideFill.png"
+       inkscape:export-xdpi="133.91"
+       inkscape:export-ydpi="133.91" />
   </g>
 </svg>
