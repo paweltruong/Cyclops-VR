@@ -16,13 +16,14 @@ public class XRUIButton : XRUIElement
     [SerializeField] Image imgProgress;
     [Tooltip("Time in seconds before button press is confirmed")]
     [SerializeField] float confirmationDuration = .5f;
+    [SerializeField] bool hideOnDisabled = true;
 
     public ButtonState State => state;
 
     public UnityEvent onConfirmed;
 
     Image image;
-    ButtonState state = ButtonState.Default;
+    public ButtonState state = ButtonState.Default;
 
     bool progressCanceled = false;
 
@@ -43,31 +44,67 @@ public class XRUIButton : XRUIElement
         state = ButtonState.Disabled;
         progressCanceled = true;
         imgProgress.fillAmount = 0;
-        UpdateVisuals();
     }
 
-    public override void Select()
+    public override void Select(Interactable interactable)
     {
-        if (state == ButtonState.Default)
+        if (!CheckInteractableDisabled())
         {
-            base.Select();
-            state = ButtonState.Highlighted;
-            StartCoroutine(UpdateConfirmationProgress());
+            if (state == ButtonState.Default)
+            {
+                base.Select(interactable);
+
+                state = ButtonState.Highlighted;
+                StartCoroutine(UpdateConfirmationProgress());
+            }
         }
+    }
+
+    bool CheckInteractableDisabled()
+    {
+        if (currentInteractable != null && currentInteractable.IsDisabled)
+        {
+            state = ButtonState.Disabled;
+            return true;
+        }
+        return false;
     }
 
     public override void Deselect()
     {
-        if (state != ButtonState.Disabled)
+        if(!CheckInteractableDisabled())
         {
             base.Deselect();
+
             state = ButtonState.Default;
         }
         progressCanceled = true;
     }
 
+    private void LateUpdate()
+    {
+        UpdateVisuals();
+    }
+
     void UpdateVisuals()
     {
+        if (CheckInteractableDisabled())
+        {
+            if (hideOnDisabled)
+            {
+                ToggleVisualization(false);
+            }
+
+            return;
+        }
+        else
+        {
+            if (state == ButtonState.Disabled)
+                state = ButtonState.Default;
+            ToggleVisualization(true);
+        }
+            
+
         switch (state)
         {
             case ButtonState.Highlighted:
@@ -75,12 +112,15 @@ public class XRUIButton : XRUIElement
                 break;
             case ButtonState.Disabled:
                 Repaint(disabledColor);
+                imgProgress.fillAmount = 0;
                 break;
             case ButtonState.Pressed:
                 Repaint(clickedColor);
+                imgProgress.fillAmount = 0;
                 break;
             default:
                 Repaint(normalColor);
+                imgProgress.fillAmount = 0;
                 break;
         }
     }
@@ -93,6 +133,17 @@ public class XRUIButton : XRUIElement
             {
                 if (img != null)
                     img.color = color;
+            }
+    }
+
+    void ToggleVisualization(bool enabled)
+    {
+        image.enabled = enabled;
+        if (highlightableChildren != null)
+            foreach (var img in highlightableChildren)
+            {
+                if (img != null)
+                    img.enabled = enabled;
             }
     }
 
@@ -115,14 +166,23 @@ public class XRUIButton : XRUIElement
                 UpdateVisuals();
                 yield break;
             }
+            if(CheckInteractableDisabled())
+                UpdateVisuals();
         }
         imgProgress.fillAmount = 1;
         if (state != ButtonState.Disabled)
         {
             state = ButtonState.Pressed;
             UpdateVisuals();
-            onConfirmed?.Invoke();
+            Confirm();
         }
+    }
+
+    void Confirm()
+    {
+        Debug.Log("Confirm");
+        onConfirmed?.Invoke();
+        currentInteractable.onSelectionConfirmed?.Invoke();
     }
 
 #if UNITY_EDITOR

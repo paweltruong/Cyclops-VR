@@ -135,7 +135,7 @@ public class Reticle : MonoBehaviour
             {
                 EventSystem.current.SetSelectedGameObject(results[0].gameObject);
                 lastUIElement = results[0].gameObject.GetComponent<XRUIElement>();
-                lastUIElement?.Select();
+                lastUIElement?.Select(lastTarget);
                 Debug.Log($"State:{(lastUIElement as XRUIButton)?.State}");
             }
         }

@@ -32,13 +32,11 @@ public class LowPassTracker : MonoBehaviour
                 GetFrequencyByDistance(maxCleanFrequency, minCleanEffectFrequency, distance, audioSource.maxDistance)
                 : GetFrequencyByDistance(maxEffectFrequency, minEffectFrequency, distance, audioSource.maxDistance);
             lowPassFilter.cutoffFrequency = frequency;
-            Debug.Log($"Dist:{distance} IsClean:{isClean} Freq: {frequency}");
         }
         else
         {
             //rolloff should not be applied but check if there should be clean sound or filtered (f.e closed doors effect)
             lowPassFilter.cutoffFrequency = isClean ? maxCleanFrequency : maxEffectFrequency;
-            Debug.Log($"MIN Dist:{distance} IsClean:{isClean} Freq: {lowPassFilter.cutoffFrequency}");
         }
     }
 
@@ -46,7 +44,6 @@ public class LowPassTracker : MonoBehaviour
     {
         var frequencyRange = maxFrequency - minFrequency;
         var frequencyMultiplier = 1 - distance / maxDistance;
-        Debug.Log($"Mulit:{frequencyMultiplier} Range: {frequencyRange}");
         return Mathf.Clamp(maxFrequency * frequencyMultiplier, minFrequency, maxFrequency);
     }
 }

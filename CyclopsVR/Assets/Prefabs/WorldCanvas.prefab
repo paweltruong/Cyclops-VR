@@ -541,7 +541,7 @@ MonoBehaviour:
   highlightableChildren:
   - {fileID: 5508499188387821614}
   imgProgress: {fileID: 5035076008920608596}
-  confirmationDuration: 0.8
+  confirmationDuration: 1.5
   onConfirmed:
     m_PersistentCalls:
       m_Calls:
