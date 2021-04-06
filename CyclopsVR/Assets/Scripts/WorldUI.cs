@@ -11,6 +11,7 @@ public class WorldUI : MonoBehaviour
 
     [SerializeField] TextMeshProUGUI txtNameField;
     [SerializeField] TextMeshProUGUI txtUnavailableField;
+    [SerializeField] XRUIButton btnEnterRoom;
     [Tooltip("Hide UI for object after x seconds if not targeted")]
     [SerializeField] float hideDelay = 1f;
 
@@ -28,8 +29,12 @@ public class WorldUI : MonoBehaviour
 
     private void Start()
     {
+        if (txtNameField == null)
+            Debug.LogError("Name text field not set");
         if (txtUnavailableField == null)
             Debug.LogError("Unavailable text field not set");
+        if (btnEnterRoom == null)
+            Debug.LogError("EnterRoom button field not set");
     }
 
     public void Hide()
@@ -66,6 +71,7 @@ public class WorldUI : MonoBehaviour
             transform.rotation = Quaternion.LookRotation(transform.position - correctedCameraPosition);
             txtNameField.text = interactable.GetName();
             txtUnavailableField.gameObject.SetActive(interactable.IsUnavailable);
+            btnEnterRoom.gameObject.SetActive(!interactable.IsUnavailable);
         }
         else
             Debug.LogError("Interactable is null");
