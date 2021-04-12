@@ -301,12 +301,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isUnavailable: 1
+  collider: {fileID: 1933974510772129246}
   isDisabled: 0
+  isInteractable: 1
   onSelectionConfirmed:
     m_PersistentCalls:
       m_Calls: []
   roomName: <room name>
   status: 0
+  onDoorOpened:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!95 &1805273905891713349
 Animator:
   serializedVersion: 3
@@ -597,6 +602,7 @@ GameObject:
   - component: {fileID: 8288787725709719066}
   - component: {fileID: 1034902376211057708}
   - component: {fileID: 6728447460744589525}
+  - component: {fileID: 1443258710597182312}
   m_Layer: 8
   m_Name: DoorWing
   m_TagString: Untagged
@@ -665,6 +671,22 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!208 &1443258710597182312
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4998126274902574089}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.625, y: 1.126, z: 0.1}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: -0.625, y: 1.1240001, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &5919861472401318092
 GameObject:
   m_ObjectHideFlags: 0
@@ -836,6 +858,7 @@ GameObject:
   - component: {fileID: 2491566796125896253}
   - component: {fileID: 5480115430281209786}
   - component: {fileID: 5959895104936156536}
+  - component: {fileID: 3951561723730984067}
   m_Layer: 8
   m_Name: DoorWing (1)
   m_TagString: Untagged
@@ -904,6 +927,22 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!208 &3951561723730984067
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7124412515139027667}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.625, y: 1.126, z: 0.1}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: -0.625, y: 1.1240001, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &7273662859572379707
 GameObject:
   m_ObjectHideFlags: 0

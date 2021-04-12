@@ -39,8 +39,11 @@ public class WorldUI : MonoBehaviour
 
     public void Hide()
     {
-        hideCanceled = false;
-        StartCoroutine(HidingTask());
+        if (this.gameObject.activeInHierarchy)
+        {
+            hideCanceled = false;
+            StartCoroutine(HidingTask());
+        }
     }
 
     IEnumerator HidingTask()
@@ -54,24 +57,27 @@ public class WorldUI : MonoBehaviour
     {
         if (interactable != null)
         {
-            hideCanceled = true;
-            var positionOfTarget = interactable.transform.position;
-            this.camera = camera;
-            gameObject.SetActive(true);
+            if (interactable.isInteractable)
+            {
+                hideCanceled = true;
+                var positionOfTarget = interactable.transform.position;
+                this.camera = camera;
+                gameObject.SetActive(true);
 
 
-            var forwardCenter = positionOfTarget - camera.transform.position;
-            var newPosition = camera.transform.position + forwardCenter.normalized * distanceFromCamera;
-            newPosition.y = distanceFromGround;
-            transform.position = newPosition;
+                var forwardCenter = positionOfTarget - camera.transform.position;
+                var newPosition = camera.transform.position + forwardCenter.normalized * distanceFromCamera;
+                newPosition.y = distanceFromGround;
+                transform.position = newPosition;
 
-            var correctedCameraPosition = camera.transform.position;
-            correctedCameraPosition.y = distanceFromGround;
+                var correctedCameraPosition = camera.transform.position;
+                correctedCameraPosition.y = distanceFromGround;
 
-            transform.rotation = Quaternion.LookRotation(transform.position - correctedCameraPosition);
-            txtNameField.text = interactable.GetName();
-            txtUnavailableField.gameObject.SetActive(interactable.IsUnavailable);
-            btnEnterRoom.gameObject.SetActive(!interactable.IsUnavailable);
+                transform.rotation = Quaternion.LookRotation(transform.position - correctedCameraPosition);
+                txtNameField.text = interactable.GetName();
+                txtUnavailableField.gameObject.SetActive(interactable.IsUnavailable);
+                btnEnterRoom.gameObject.SetActive(!interactable.IsUnavailable);
+            }
         }
         else
             Debug.LogError("Interactable is null");

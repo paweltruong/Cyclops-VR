@@ -10,6 +10,7 @@ public class InteractableDoor : Interactable
 {
     [SerializeField] string roomName;
     public DoorStatus status;
+    public UnityEvent onDoorOpened;
 
     Animator anim;
     AudioSource audioSource;
@@ -59,6 +60,10 @@ public class InteractableDoor : Interactable
             case DoorStatus.Opening:
             case DoorStatus.Closing:
                 isDisabled = true;
+                break;
+            case DoorStatus.Open:
+                isDisabled = false;
+                onDoorOpened?.Invoke();
                 break;
             default:
                 isDisabled = false;

@@ -7,8 +7,10 @@ using UnityEngine.Events;
 public class Interactable : MonoBehaviour
 {
     [SerializeField] bool isUnavailable = true;
+    [SerializeField] Collider collider;
 
     public bool isDisabled;
+    public bool isInteractable = true;
     protected bool isTargeted;
 
     public bool IsDisabled => isDisabled;
@@ -16,6 +18,12 @@ public class Interactable : MonoBehaviour
     
 
     public UnityEvent onSelectionConfirmed;
+
+    private void Awake()
+    {
+        if (collider == null)
+            Debug.LogError("Collider is not set");
+    }
 
     public virtual void Targeted()
     {
@@ -27,4 +35,15 @@ public class Interactable : MonoBehaviour
     }
 
     public virtual string GetName() => string.Empty;
+
+    public void ToggleInteractable()
+    {
+        SetInteractable(!isInteractable);
+    }
+
+    public void SetInteractable(bool value)
+    {
+        isInteractable = value;
+        collider.enabled = value;
+    }
 }

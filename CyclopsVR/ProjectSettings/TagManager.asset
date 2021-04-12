@@ -14,7 +14,7 @@ TagManager:
   - 
   - 
   - Facility
-  - Floor
+  - WallsAndFloorNotPenetrable
   - Ceiling
   - 
   - 

@@ -74,11 +74,13 @@ public class Reticle : MonoBehaviour
 
 #if UNITY_EDITOR        
         Debug.DrawRay(rayPointerStart, rayOrigin.forward * maxDistance, result ? Color.green : Color.red);
+        if(hitInfo.collider != null)
+            Debug.Log(hitInfo.collider.gameObject.name);
 #endif
         if (targetAquired && !result)
         {
             //shrink
-            StartCoroutine(Transition2(false));
+            StartCoroutine(ReticleTransition(false));
             targetAquired = false;
             if (lastTarget != null)
             {
@@ -89,12 +91,13 @@ public class Reticle : MonoBehaviour
         }
         if (!targetAquired && result)
         {
-            //grow
-            StartCoroutine(Transition2(true));
             targetAquired = true;
             lastTarget = lastHit.collider.gameObject.GetComponent<Interactable>();
             if (lastTarget != null)
             {
+                //grow
+                StartCoroutine(ReticleTransition(true));
+
                 lastTarget?.Targeted();
                 worldUI.Show(mainCamera, lastTarget);
             }
@@ -146,7 +149,12 @@ public class Reticle : MonoBehaviour
         }
     }
 
-    IEnumerator Transition2(bool grow)
+    /// <summary>
+    /// grow or shrink croshair
+    /// </summary>
+    /// <param name="grow"></param>
+    /// <returns></returns>
+    IEnumerator ReticleTransition(bool grow)
     {
         float counter = transitionDuration;
         var range = maxSize - minSize;
