@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -17,6 +18,7 @@ public class Reticle : MonoBehaviour
     [SerializeField] float transitionDuration = .4f;
     [SerializeField] WorldUI worldUI;
 
+    RaycastHit[] hitInfo;
     Ray lastRay;
     RaycastHit lastHit;
     Interactable lastTarget;
@@ -66,16 +68,20 @@ public class Reticle : MonoBehaviour
         Vector3 finalRayStart = cameraLocation + (finalRayDirection * mainCamera.nearClipPlane);
 
         var ray = new Ray(finalRayStart, finalRayDirection);
-        RaycastHit hitInfo;
-        var result = Physics.Raycast(ray, out hitInfo, maxDistance, layerMask);
-        lastHit = hitInfo;
+
+        hitInfo = Physics.RaycastAll(finalRayStart, finalRayDirection, maxDistance, layerMask);
+
+        lastHit = hitInfo.FirstOrDefault();
+        bool result = lastHit.collider != null ? lastHit.collider.gameObject.GetComponent<Interactable>() != null : false;
 
         CastGraphicRay(mainCamera);
 
 #if UNITY_EDITOR        
-        Debug.DrawRay(rayPointerStart, rayOrigin.forward * maxDistance, result ? Color.green : Color.red);
-        if(hitInfo.collider != null)
-            Debug.Log(hitInfo.collider.gameObject.name);
+        Debug.DrawRay(rayPointerStart, rayOrigin.forward * maxDistance, lastHit.collider != null ? Color.green : Color.red);
+        //if (hitInfo.Length > 0)
+        //{
+        //    Debug.Log("Hit:" + string.Join(",", hitInfo.Select(hi => hi.collider.gameObject.name)));
+        //}
 #endif
         if (targetAquired && !result)
         {
