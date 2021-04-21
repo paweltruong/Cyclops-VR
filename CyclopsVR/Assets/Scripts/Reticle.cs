@@ -21,10 +21,12 @@ public class Reticle : MonoBehaviour
     RaycastHit[] hitInfo;
     Ray lastRay;
     RaycastHit lastHit;
+    Interactable lastTargetCache;
     Interactable lastTarget;
     XRUIElement lastUIElement;
     bool targetAquired = false;
     RectTransform rect;
+    bool isReticleShrinked;
 
     GraphicRaycaster m_Raycaster;
 
@@ -86,7 +88,10 @@ public class Reticle : MonoBehaviour
         //    Debug.Log("Hit:" + string.Join(",", hitInfo.Select(hi => hi.collider.gameObject.name)));
         //}
 #endif
-
+        var newTarget = result? lastHit.collider.gameObject.GetComponent<Interactable>() : null;
+        DebugUI.UpdateGlobalRayState($"TarAq:{targetAquired}, Result:{result}, LastTar:{lastTarget}, LastUI:{lastUIElement}");
+        if (lastTarget != newTarget)
+            targetAquired = false;//target will change
         //stop focusing on target
         if (targetAquired && !result)
         {
@@ -99,30 +104,66 @@ public class Reticle : MonoBehaviour
             {
                 //hide menu
                 //shrink
-                StartCoroutine(ReticleTransition(false));
-                targetAquired = false;
-                if (lastTarget != null)
-                {
-                    lastTarget.Untargeted();
-                    worldUI.HideDelayed();
-                }
-                lastTarget = null;
+                HideDelayed();
             }
         }
         //new target focused
         if (!targetAquired && result)
         {
             targetAquired = true;
-            lastTarget = lastHit.collider.gameObject.GetComponent<Interactable>();
+            lastTargetCache = lastTarget = newTarget;
             if (lastTarget != null)
             {
                 //grow
-                StartCoroutine(ReticleTransition(true));
-
-                lastTarget?.Targeted();
-                worldUI.Show(mainCamera, lastTarget);
+                Show();
             }
         }
+
+
+        ////update world UI if something targeted but panel not shown
+        //if (targetAquired && result && !worldUI.gameObject.activeInHierarchy && lastTarget != lastHit)
+        //{
+        //    if()
+        //    Show();
+        //}
+
+        //when lost focus but user returned to UI that not yet dissapeared
+        if (!targetAquired && !result && lastUIElement != null)
+        {
+            Debug.Log($"Keep UI: {lastTargetCache}");
+            //still foucused on UI element
+            lastUIElement?.Select(null);
+            worldUI.Show(mainCamera, lastTargetCache);
+        }
+        //hide if nothing is targeted
+        if (!targetAquired && !result && lastUIElement == null)
+        {
+            Debug.Log("Hide delayed");
+            HideDelayed();
+        }
+    }
+
+    void Show()
+    {
+        if (isReticleShrinked)
+            StartCoroutine(ReticleTransition(true));
+
+        lastTarget?.Targeted();
+        worldUI.Show(mainCamera, lastTarget);
+    }
+
+    void HideDelayed()
+    {
+        if (!isReticleShrinked)
+            StartCoroutine(ReticleTransition(false));
+
+        targetAquired = false;
+        if (lastTarget != null)
+        {
+            lastTarget.Untargeted();
+            lastTarget = null;
+        }
+        worldUI.HideDelayed();
     }
 
     void CastGraphicRay(Camera camera)
@@ -205,5 +246,6 @@ public class Reticle : MonoBehaviour
             reticleOutline.rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, minSize);
             reticleOutline.rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, minSize);
         }
+        isReticleShrinked = !grow;
     }
 }

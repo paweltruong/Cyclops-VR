@@ -9,11 +9,19 @@ public class XRUIElement : MonoBehaviour
 
     public bool IsSelected => isSelected;
 
+    protected Interactable currentInteractableCache;
     protected Interactable currentInteractable;
 
+    /// <summary>
+    /// </summary>
+    /// <param name="interactable">when null select last bound interactable object</param>
     public virtual void Select(Interactable interactable)
     {
-        currentInteractable = interactable;
+        if (interactable == null)
+            currentInteractable = currentInteractableCache;
+        else
+            currentInteractableCache = currentInteractable = interactable;
+
         isSelected = true;
     }
     public virtual void Deselect()

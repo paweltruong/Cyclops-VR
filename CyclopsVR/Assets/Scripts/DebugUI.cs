@@ -8,6 +8,7 @@ public class DebugUI : MonoBehaviour
     static DebugUI instance;
     [SerializeField] TextMeshProUGUI txtTarget;
     [SerializeField] TextMeshProUGUI txtDistanceToWP;
+    [SerializeField] TextMeshProUGUI txtRayState;
 
     private void Awake()
     {
@@ -15,24 +16,26 @@ public class DebugUI : MonoBehaviour
             instance = this;
         if (instance != this)
             Destroy(this);
+
+        if (txtTarget == null || txtDistanceToWP == null || txtRayState == null)
+            Debug.LogError("Debug text fields not set");
     }
-    public void UpdateTarget(string value)
+    public void UpdateField(TextMeshProUGUI txtField, string value)
     {
-        txtTarget.text = value;
+        txtField.text = value;
     }
 
     public static void UpdateGlobalTarget(string value)
     {
-        instance.UpdateTarget(value);
-    }
-
-    public void UpdateDistanceToWP(string value)
-    {
-        txtDistanceToWP.text = value;
+        instance?.UpdateField(instance?.txtTarget, value);
     }
 
     public static void UpdateGlobalDistanceToWP(string value)
     {
-        instance.UpdateDistanceToWP(value);
+        instance?.UpdateField(instance?.txtDistanceToWP, value);
+    }
+    public static void UpdateGlobalRayState(string value)
+    {
+        instance?.UpdateField(instance?.txtRayState, value);
     }
 }

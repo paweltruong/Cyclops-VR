@@ -181,8 +181,10 @@ public class XRUIButton : XRUIElement
     void Confirm()
     {
         Debug.Log("Confirm");
+        currentInteractable?.onSelectionConfirmed?.Invoke();
+        if (currentInteractable == null || currentInteractable.onSelectionConfirmed == null)
+            Debug.Log($"Error:{currentInteractable}");
         onConfirmed?.Invoke();
-        currentInteractable.onSelectionConfirmed?.Invoke();
     }
 
 #if UNITY_EDITOR

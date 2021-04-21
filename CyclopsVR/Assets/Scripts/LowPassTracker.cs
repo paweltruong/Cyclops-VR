@@ -6,6 +6,7 @@ using UnityEngine;
 [RequireComponent(typeof(AudioLowPassFilter))]
 public class LowPassTracker : MonoBehaviour
 {
+    public bool Cutoff { get { return cutoff; } set { cutoff = value; } }
     [SerializeField] bool isClean = false;
     [SerializeField] float maxCleanFrequency = 5000f;
     [SerializeField] float minCleanEffectFrequency = 3000f;
@@ -13,6 +14,8 @@ public class LowPassTracker : MonoBehaviour
     [SerializeField] float minEffectFrequency = 300f;
     [SerializeField] GameObject actor;
 
+    [SerializeField] bool cutoff;
+    float initialVolume;
     AudioSource audioSource;
     AudioLowPassFilter lowPassFilter;
 
@@ -20,23 +23,33 @@ public class LowPassTracker : MonoBehaviour
     {
         audioSource = GetComponent<AudioSource>();
         lowPassFilter = GetComponent<AudioLowPassFilter>();
+        initialVolume = audioSource.volume;
     }
 
     private void Update()
     {
-        var distance = Vector3.Distance(transform.position, actor.transform.position);
-        if (distance > audioSource.minDistance && audioSource.maxDistance != 0)
+        if (Cutoff)
         {
-            //calculate frequency 
-            var frequency = isClean ?
-                GetFrequencyByDistance(maxCleanFrequency, minCleanEffectFrequency, distance, audioSource.maxDistance)
-                : GetFrequencyByDistance(maxEffectFrequency, minEffectFrequency, distance, audioSource.maxDistance);
-            lowPassFilter.cutoffFrequency = frequency;
+            audioSource.volume = 0;
         }
         else
         {
-            //rolloff should not be applied but check if there should be clean sound or filtered (f.e closed doors effect)
-            lowPassFilter.cutoffFrequency = isClean ? maxCleanFrequency : maxEffectFrequency;
+            audioSource.volume = initialVolume;
+
+            var distance = Vector3.Distance(transform.position, actor.transform.position);
+            if (distance > audioSource.minDistance && audioSource.maxDistance != 0)
+            {
+                //calculate frequency 
+                var frequency = isClean ?
+                    GetFrequencyByDistance(maxCleanFrequency, minCleanEffectFrequency, distance, audioSource.maxDistance)
+                    : GetFrequencyByDistance(maxEffectFrequency, minEffectFrequency, distance, audioSource.maxDistance);
+                lowPassFilter.cutoffFrequency = frequency;
+            }
+            else
+            {
+                //rolloff should not be applied but check if there should be clean sound or filtered (f.e closed doors effect)
+                lowPassFilter.cutoffFrequency = isClean ? maxCleanFrequency : maxEffectFrequency;
+            }
         }
     }
 

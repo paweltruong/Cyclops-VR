@@ -58,12 +58,17 @@ public class WaypointMovement : MonoBehaviour
     {
         previousWaypoint = targetedWaypoint;
         targetedWaypoint = destination;
+        targetedWaypoint.isCurrentTarget = true;
         Debug.Log($"GOTO D{targetedWaypoint} , prev:{previousWaypoint}");
         if (destination != null)
         {
             Debug.Log($"Dest , prev:{previousWaypoint}");
             if (previousWaypoint != null)
+            {
+                //TODO:refactoring
+                previousWaypoint.isCurrentTarget = false;
                 previousWaypoint.isOccupied = false;
+            }
             agent.SetDestination(destination.transform.position);
             targetedWaypoint.Hide();
             targetedWaypoint.ToggleInteractable();
