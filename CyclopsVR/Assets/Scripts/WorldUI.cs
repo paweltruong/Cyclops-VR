@@ -11,7 +11,14 @@ public class WorldUI : MonoBehaviour
 
     [SerializeField] TextMeshProUGUI txtNameField;
     [SerializeField] TextMeshProUGUI txtUnavailableField;
-    [SerializeField] XRUIButton btnEnterRoom;
+    /// <summary>
+    /// open close door
+    /// </summary>
+    [SerializeField] XRUIButton btnDoor;
+    /// <summary>
+    /// walk into place
+    /// </summary>
+    [SerializeField] XRUIButton btnWalk;
     [Tooltip("Hide UI for object after x seconds if not targeted")]
     [SerializeField] float hideDelay = 1f;
 
@@ -33,17 +40,24 @@ public class WorldUI : MonoBehaviour
             Debug.LogError("Name text field not set");
         if (txtUnavailableField == null)
             Debug.LogError("Unavailable text field not set");
-        if (btnEnterRoom == null)
-            Debug.LogError("EnterRoom button field not set");
+        if (btnDoor == null)
+            Debug.LogError("Door button field not set");
+        if (btnWalk == null)
+            Debug.LogError("Walk button field not set");
     }
 
-    public void Hide()
+    public void HideDelayed()
     {
         if (this.gameObject.activeInHierarchy)
         {
             hideCanceled = false;
             StartCoroutine(HidingTask());
         }
+    }
+
+    public void Hide()
+    {
+        gameObject.SetActive(false);
     }
 
     IEnumerator HidingTask()
@@ -76,7 +90,17 @@ public class WorldUI : MonoBehaviour
                 transform.rotation = Quaternion.LookRotation(transform.position - correctedCameraPosition);
                 txtNameField.text = interactable.GetName();
                 txtUnavailableField.gameObject.SetActive(interactable.IsUnavailable);
-                btnEnterRoom.gameObject.SetActive(!interactable.IsUnavailable);
+
+                if (interactable is InteractableDoor)
+                {
+                    btnDoor.gameObject.SetActive(!interactable.IsUnavailable);
+                    btnWalk.gameObject.SetActive(false);
+                }
+                else if (interactable is InteractableWaypoint)
+                {
+                    btnDoor.gameObject.SetActive(false);
+                    btnWalk.gameObject.SetActive(true);
+                }
             }
         }
         else

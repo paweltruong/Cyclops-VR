@@ -76,25 +76,40 @@ public class Reticle : MonoBehaviour
 
         CastGraphicRay(mainCamera);
 
+
+
 #if UNITY_EDITOR        
         Debug.DrawRay(rayPointerStart, rayOrigin.forward * maxDistance, lastHit.collider != null ? Color.green : Color.red);
+        DebugUI.UpdateGlobalTarget(string.Join(",", hitInfo.Select(hi => hi.collider.gameObject.name)));
         //if (hitInfo.Length > 0)
         //{
         //    Debug.Log("Hit:" + string.Join(",", hitInfo.Select(hi => hi.collider.gameObject.name)));
         //}
 #endif
+
+        //stop focusing on target
         if (targetAquired && !result)
         {
-            //shrink
-            StartCoroutine(ReticleTransition(false));
-            targetAquired = false;
-            if (lastTarget != null)
+            if (lastUIElement != null)
             {
-                lastTarget.Untargeted();
-                worldUI.Hide();
+                //if UI is still focused even if interactable object is not targeted any more
+                //dont hide - do nothing
             }
-            lastTarget = null;
+            else
+            {
+                //hide menu
+                //shrink
+                StartCoroutine(ReticleTransition(false));
+                targetAquired = false;
+                if (lastTarget != null)
+                {
+                    lastTarget.Untargeted();
+                    worldUI.HideDelayed();
+                }
+                lastTarget = null;
+            }
         }
+        //new target focused
         if (!targetAquired && result)
         {
             targetAquired = true;
@@ -115,13 +130,6 @@ public class Reticle : MonoBehaviour
         var m_EventSystem = EventSystem.current;
         //Set up the new Pointer Event
         var m_PointerEventData = new PointerEventData(m_EventSystem);
-
-        //camera.Sc.WorldToScreenPoint(hit.point);
-        //m_PointerEventData.position = Input.mousePosition;
-        //camera.Sc
-        //Debug.Log(Input.mousePosition);
-        //Debug.Log($"tpos:{transform.position}, tlpos:{transform.localPosition}, trecpos:{rect.position}, trlpos:{rect.localPosition}, cw2s:{camera.WorldToScreenPoint(transform.position)}");
-
 
         //Set the Pointer Event Position to that of the game object
         m_PointerEventData.position = camera.WorldToScreenPoint(this.transform.position);
