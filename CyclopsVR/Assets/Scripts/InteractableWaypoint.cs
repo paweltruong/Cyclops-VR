@@ -9,6 +9,8 @@ public class InteractableWaypoint : Interactable
     [SerializeField] string key;
     [SerializeField] string waypointName;
     [SerializeField] GameObject waypointVisualization;
+    [SerializeField] Material defaultMaterial;
+    [SerializeField] Material highlightedMaterial;
 
     [SerializeField] InteractableDoor[] DoorsInRoom;
 
@@ -28,6 +30,8 @@ public class InteractableWaypoint : Interactable
 
     bool isSealed = true;
 
+    MeshRenderer visualisationRenderer;
+
     public override string GetName()
     {
         return waypointName;
@@ -46,6 +50,8 @@ public class InteractableWaypoint : Interactable
                 door.onDoorClosed.AddListener(UpdateRoomStatus);
                 door.onDoorOpening.AddListener(UpdateRoomStatus);
             }
+
+        visualisationRenderer = waypointVisualization.GetComponent<MeshRenderer>();
     }
 
     void UpdateRoomStatus()
@@ -72,6 +78,14 @@ public class InteractableWaypoint : Interactable
         }
 
         isSealed = allSealed;
+    }
+
+    public void SetHighlight(bool enabled)
+    {
+        if (enabled)
+            visualisationRenderer.materials = new[] { highlightedMaterial };
+        else
+            visualisationRenderer.materials = new[] { defaultMaterial };
     }
 
 

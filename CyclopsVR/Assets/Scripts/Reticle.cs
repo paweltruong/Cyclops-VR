@@ -73,7 +73,9 @@ public class Reticle : MonoBehaviour
 
         hitInfo = Physics.RaycastAll(finalRayStart, finalRayDirection, maxDistance, layerMask);
 
-        lastHit = hitInfo.FirstOrDefault();
+        //last hit is the closest hit
+        lastHit = hitInfo.OrderBy(hi => Vector3.Distance(hi.transform.position, this.transform.position)).FirstOrDefault();
+
         bool result = lastHit.collider != null ? lastHit.collider.gameObject.GetComponent<Interactable>() != null : false;
 
         CastGraphicRay(mainCamera);
@@ -88,7 +90,7 @@ public class Reticle : MonoBehaviour
         //    Debug.Log("Hit:" + string.Join(",", hitInfo.Select(hi => hi.collider.gameObject.name)));
         //}
 #endif
-        var newTarget = result? lastHit.collider.gameObject.GetComponent<Interactable>() : null;
+        var newTarget = result ? lastHit.collider.gameObject.GetComponent<Interactable>() : null;
         DebugUI.UpdateGlobalRayState($"TarAq:{targetAquired}, Result:{result}, LastTar:{lastTarget}, LastUI:{lastUIElement}");
         if (lastTarget != newTarget)
             targetAquired = false;//target will change
@@ -104,7 +106,7 @@ public class Reticle : MonoBehaviour
             {
                 //hide menu
                 //shrink
-                HideDelayed();
+                HideUIAndSelectionDelayed();
             }
         }
         //new target focused
@@ -115,7 +117,7 @@ public class Reticle : MonoBehaviour
             if (lastTarget != null)
             {
                 //grow
-                Show();
+                ShowUIAndSelection();
             }
         }
 
@@ -134,25 +136,29 @@ public class Reticle : MonoBehaviour
             //still foucused on UI element
             lastUIElement?.Select(null);
             worldUI.Show(mainCamera, lastTargetCache);
+            TrySetWaypointHighlight(lastTargetCache, true);
         }
         //hide if nothing is targeted
         if (!targetAquired && !result && lastUIElement == null)
         {
             Debug.Log("Hide delayed");
-            HideDelayed();
+            HideUIAndSelectionDelayed();
         }
+
     }
 
-    void Show()
+    void ShowUIAndSelection()
     {
         if (isReticleShrinked)
             StartCoroutine(ReticleTransition(true));
 
         lastTarget?.Targeted();
         worldUI.Show(mainCamera, lastTarget);
+
+        TrySetWaypointHighlight(lastTarget, true);
     }
 
-    void HideDelayed()
+    void HideUIAndSelectionDelayed()
     {
         if (!isReticleShrinked)
             StartCoroutine(ReticleTransition(false));
@@ -160,6 +166,8 @@ public class Reticle : MonoBehaviour
         targetAquired = false;
         if (lastTarget != null)
         {
+            TrySetWaypointHighlight(lastTarget, false);
+
             lastTarget.Untargeted();
             lastTarget = null;
         }
@@ -202,6 +210,14 @@ public class Reticle : MonoBehaviour
             lastUIElement?.Deselect();
             lastUIElement = null;
         }
+    }
+
+    void TrySetWaypointHighlight(Interactable interactable, bool highlightEnabled)
+    {
+        //TODO:add delayed support
+        //handle waypoint specific
+        if (interactable is InteractableWaypoint)
+            (interactable as InteractableWaypoint).SetHighlight(highlightEnabled);
     }
 
     /// <summary>
