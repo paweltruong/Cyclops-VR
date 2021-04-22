@@ -28,11 +28,11 @@ public class Reticle : MonoBehaviour
     RectTransform rect;
     bool isReticleShrinked;
 
-    GraphicRaycaster m_Raycaster;
+    GraphicRaycaster graphicRaycaster;
 
     private void Awake()
     {
-        m_Raycaster = GetComponent<GraphicRaycaster>();
+        graphicRaycaster = GetComponent<GraphicRaycaster>();
         rect = GetComponent<RectTransform>();
     }
 
@@ -53,49 +53,34 @@ public class Reticle : MonoBehaviour
 
     void Update()
     {
-        CastRay();
+        UpdateTarget();
     }
 
-    void CastRay()
+    void UpdateTarget()
     {
+        bool physicRayResult;
 
-        Vector3 rayPointerStart = rayOrigin.position;
-        Vector3 rayPointerEnd = rayPointerStart +
-                                (rayOrigin.forward * maxDistance);
-
-        Vector3 cameraLocation = mainCamera.transform.position;
-        Vector3 finalRayDirection = rayPointerEnd - cameraLocation;
-        finalRayDirection.Normalize();
-
-        Vector3 finalRayStart = cameraLocation + (finalRayDirection * mainCamera.nearClipPlane);
-
-        var ray = new Ray(finalRayStart, finalRayDirection);
-
-        hitInfo = Physics.RaycastAll(finalRayStart, finalRayDirection, maxDistance, layerMask);
-
-        //last hit is the closest hit
-        lastHit = hitInfo.OrderBy(hi => Vector3.Distance(hi.transform.position, this.transform.position)).FirstOrDefault();
-
-        bool result = lastHit.collider != null ? lastHit.collider.gameObject.GetComponent<Interactable>() != null : false;
-
+        CastPhysicRay(out physicRayResult);
         CastGraphicRay(mainCamera);
 
+        var newTarget = physicRayResult ? lastHit.collider.gameObject.GetComponent<Interactable>() : null;
 
+        DebugUI.UpdateGlobalRayState($"TarAq:{targetAquired}, Result:{physicRayResult}, LastTar:{lastTarget}, LastUI:{lastUIElement}");
 
-#if UNITY_EDITOR        
-        Debug.DrawRay(rayPointerStart, rayOrigin.forward * maxDistance, lastHit.collider != null ? Color.green : Color.red);
-        DebugUI.UpdateGlobalTarget(string.Join(",", hitInfo.Select(hi => hi.collider.gameObject.name)));
-        //if (hitInfo.Length > 0)
-        //{
-        //    Debug.Log("Hit:" + string.Join(",", hitInfo.Select(hi => hi.collider.gameObject.name)));
-        //}
-#endif
-        var newTarget = result ? lastHit.collider.gameObject.GetComponent<Interactable>() : null;
-        DebugUI.UpdateGlobalRayState($"TarAq:{targetAquired}, Result:{result}, LastTar:{lastTarget}, LastUI:{lastUIElement}");
+        HandleRays(physicRayResult, newTarget);
+    }
+
+    /// <summary>
+    /// TODO:refactoring
+    /// </summary>
+    /// <param name="physicRayResult"></param>
+    /// <param name="newTarget"></param>
+    private void HandleRays(bool physicRayResult, Interactable newTarget)
+    {
         if (lastTarget != newTarget)
             targetAquired = false;//target will change
         //stop focusing on target
-        if (targetAquired && !result)
+        if (targetAquired && !physicRayResult)
         {
             if (lastUIElement != null)
             {
@@ -110,7 +95,7 @@ public class Reticle : MonoBehaviour
             }
         }
         //new target focused
-        if (!targetAquired && result)
+        if (!targetAquired && physicRayResult)
         {
             targetAquired = true;
             lastTargetCache = lastTarget = newTarget;
@@ -121,30 +106,47 @@ public class Reticle : MonoBehaviour
             }
         }
 
-
-        ////update world UI if something targeted but panel not shown
-        //if (targetAquired && result && !worldUI.gameObject.activeInHierarchy && lastTarget != lastHit)
-        //{
-        //    if()
-        //    Show();
-        //}
-
         //when lost focus but user returned to UI that not yet dissapeared
-        if (!targetAquired && !result && lastUIElement != null)
+        if (!targetAquired && !physicRayResult && lastUIElement != null)
         {
-            Debug.Log($"Keep UI: {lastTargetCache}");
+            //Debug.Log($"Keep UI: {lastTargetCache}");
             //still foucused on UI element
             lastUIElement?.Select(null);
             worldUI.Show(mainCamera, lastTargetCache);
             TrySetWaypointHighlight(lastTargetCache, true);
         }
         //hide if nothing is targeted
-        if (!targetAquired && !result && lastUIElement == null)
+        if (!targetAquired && !physicRayResult && lastUIElement == null)
         {
-            Debug.Log("Hide delayed");
+            //Debug.Log("Hide delayed");
             HideUIAndSelectionDelayed();
         }
+    }
 
+    private void CastPhysicRay( out bool result)
+    {
+        Vector3 rayPointerStart = rayOrigin.position;
+        Vector3 rayPointerEnd = rayPointerStart + (rayOrigin.forward * maxDistance);
+
+        Vector3 cameraLocation = mainCamera.transform.position;
+        Vector3 finalRayDirection = rayPointerEnd - cameraLocation;
+        finalRayDirection.Normalize();
+
+        Vector3 finalRayStart = cameraLocation + (finalRayDirection * mainCamera.nearClipPlane);
+
+        var ray = new Ray(finalRayStart, finalRayDirection);
+
+        hitInfo = Physics.RaycastAll(finalRayStart, finalRayDirection, maxDistance, layerMask);
+
+        //last hit is the closest hit
+        lastHit = hitInfo.OrderBy(hi => Vector3.Distance(hi.point, this.transform.position)).FirstOrDefault();
+
+        result = lastHit.collider != null ? lastHit.collider.gameObject.GetComponent<Interactable>() != null : false;
+
+#if UNITY_EDITOR
+        Debug.DrawRay(rayPointerStart, rayOrigin.forward * maxDistance, lastHit.collider != null ? Color.green : Color.red);
+        DebugUI.UpdateGlobalTarget(string.Join(",", hitInfo.Select(hi => hi.collider.gameObject.name)));
+#endif
     }
 
     void ShowUIAndSelection()
@@ -187,7 +189,7 @@ public class Reticle : MonoBehaviour
         List<RaycastResult> results = new List<RaycastResult>();
 
         //Raycast using the Graphics Raycaster and mouse click position
-        m_Raycaster.Raycast(m_PointerEventData, results);
+        graphicRaycaster.Raycast(m_PointerEventData, results);
         //Debug.Log($"GRay:{m_PointerEventData.position}");
 
         if (results.Count > 0) Debug.Log("Hit " + results[0].gameObject.name);
@@ -195,14 +197,14 @@ public class Reticle : MonoBehaviour
         EventSystem.current.RaycastAll(m_PointerEventData, results);
         if (results.Count > 0)
         {
-            Debug.Log($"Hit2:{results[0].gameObject.name}");
+            //Debug.Log($"Hit2:{results[0].gameObject.name}");
 
             if (lastUIElement == null || lastUIElement.gameObject != results[0].gameObject)
             {
                 EventSystem.current.SetSelectedGameObject(results[0].gameObject);
                 lastUIElement = results[0].gameObject.GetComponent<XRUIElement>();
                 lastUIElement?.Select(lastTarget);
-                Debug.Log($"State:{(lastUIElement as XRUIButton)?.State}");
+                //Debug.Log($"State:{(lastUIElement as XRUIButton)?.State}");
             }
         }
         else
