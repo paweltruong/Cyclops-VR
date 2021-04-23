@@ -1414,6 +1414,7 @@ GameObject:
   - component: {fileID: 7083070179458922895}
   - component: {fileID: 6857934876351164213}
   - component: {fileID: 6857934876351164212}
+  - component: {fileID: 2278190029995873113}
   m_Layer: 0
   m_Name: XR Rig
   m_TagString: Untagged
@@ -1473,6 +1474,18 @@ NavMeshAgent:
   m_BaseOffset: 1.7
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &2278190029995873113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7083070179458922894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d59113bfa219aff4ca24382eac83455c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7083070179598304994
 GameObject:
   m_ObjectHideFlags: 0

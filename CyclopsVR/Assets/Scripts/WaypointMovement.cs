@@ -4,14 +4,11 @@ using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Events;
 
-public class WaypointMovement : MonoBehaviour
+public class WaypointMovement : NodeMovement
 {
     [SerializeField] float stoppingDistanceErrorMargin = 0.3f;
-    [SerializeField] InteractableWaypoint initialWaypoint;
 
     NavMeshAgent agent;
-    InteractableWaypoint previousWaypoint;
-    InteractableWaypoint targetedWaypoint;
 
     private void Awake()
     {
@@ -20,59 +17,38 @@ public class WaypointMovement : MonoBehaviour
 
     private void Start()
     {
-        targetedWaypoint = initialWaypoint;
-        initialWaypoint.Hide();
+        base.Initialize();
         agent.updateRotation = false;
     }
 
     private void Update()
     {
-        var distance = Vector3.Distance(agent.destination, transform.position);
-        DebugUI.UpdateGlobalDistanceToWP(distance.ToString());
-        //Debug.Log($"Dist:{distance}");
-        if (!agent.isStopped)
+        if (GameSettings.globalLocomotion == LocomotionType.AutoWalk)
         {
-
-            if (distance - agent.baseOffset <= agent.stoppingDistance + stoppingDistanceErrorMargin)
+            var distance = Vector3.Distance(agent.destination, transform.position);
+            DebugUI.UpdateGlobalDistanceToWP(distance.ToString());
+            //Debug.Log($"Dist:{distance}");
+            if (!agent.isStopped)
             {
-                agent.isStopped = true;
 
-                if (previousWaypoint != null)
+                if (distance - agent.baseOffset <= agent.stoppingDistance + stoppingDistanceErrorMargin)
                 {
-                    previousWaypoint.Show();
-                    previousWaypoint.ToggleInteractable();
-                }
+                    agent.isStopped = true;
 
-                if (targetedWaypoint != null 
-                    && previousWaypoint != null//ignore start of the level, initial waypoint
-                    )
-                {
-                    targetedWaypoint.isOccupied = true;
-                    targetedWaypoint?.onReached?.Invoke();
+                    Arrived();
                 }
             }
         }
     }
 
-    public void GoTo(InteractableWaypoint destination)
+
+    public override void GoTo(InteractableWaypoint destination)
     {
-        previousWaypoint = targetedWaypoint;
-        targetedWaypoint = destination;
-        targetedWaypoint.isCurrentTarget = true;
-        Debug.Log($"GOTO D{targetedWaypoint} , prev:{previousWaypoint}");
+        base.GoTo(destination);
+
         if (destination != null)
-        {
-            Debug.Log($"Dest , prev:{previousWaypoint}");
-            if (previousWaypoint != null)
-            {
-                //TODO:refactoring
-                previousWaypoint.isCurrentTarget = false;
-                previousWaypoint.isOccupied = false;
-            }
             agent.SetDestination(destination.transform.position);
-            targetedWaypoint.Hide();
-            targetedWaypoint.ToggleInteractable();
-        }
+
         agent.isStopped = false;
     }
 }
