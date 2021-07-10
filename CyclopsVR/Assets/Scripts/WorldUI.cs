@@ -19,6 +19,10 @@ public class WorldUI : MonoBehaviour
     /// walk into place
     /// </summary>
     [SerializeField] XRUIButton btnWalk;
+    /// <summary>
+    /// spawn enemies
+    /// </summary>
+    [SerializeField] XRUIButton btnBattle;
     [Tooltip("Hide UI for object after x seconds if not targeted")]
     [SerializeField] float hideDelay = 1f;
 
@@ -44,6 +48,8 @@ public class WorldUI : MonoBehaviour
             Debug.LogError("Door button field not set");
         if (btnWalk == null)
             Debug.LogError("Walk button field not set");
+        if (btnBattle == null)
+            Debug.LogError("Battle button field not set");
     }
 
     public void HideDelayed()
@@ -95,12 +101,27 @@ public class WorldUI : MonoBehaviour
                 {
                     btnDoor.gameObject.SetActive(!interactable.IsUnavailable);
                     btnWalk.gameObject.SetActive(false);
+                    btnBattle.gameObject.SetActive(false);
                 }
                 else if (interactable is InteractableWaypoint)
                 {
                     btnDoor.gameObject.SetActive(false);
                     btnWalk.gameObject.SetActive(true);
+                    btnBattle.gameObject.SetActive(false);
                 }
+                else if (interactable is InteractableBattle)
+                {
+                    btnDoor.gameObject.SetActive(false);
+                    btnWalk.gameObject.SetActive(false);
+                    btnBattle.gameObject.SetActive(true);
+                }
+                else
+                {
+                    btnDoor.gameObject.SetActive(false);
+                    btnWalk.gameObject.SetActive(false);
+                    btnBattle.gameObject.SetActive(false);
+                }
+
             }
         }
         else

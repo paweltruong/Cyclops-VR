@@ -19,7 +19,7 @@ public class Interactable : MonoBehaviour
 
     public UnityEvent onSelectionConfirmed;
 
-    private void Awake()
+    protected void Awake()
     {
         if (collider == null)
             Debug.LogError("Collider is not set");

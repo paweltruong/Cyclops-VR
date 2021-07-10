@@ -15,7 +15,24 @@
    inkscape:version="1.0.2 (e86c870879, 2021-01-15, custom)"
    sodipodi:docname="allvectorgraphics.svg">
   <defs
-     id="defs2" />
+     id="defs2">
+    <inkscape:path-effect
+       effect="skeletal"
+       id="path-effect895"
+       is_visible="true"
+       lpeversion="1"
+       pattern="M 0,5 C 0,2.24 2.24,0 5,0 7.76,0 10,2.24 10,5 10,7.76 7.76,10 5,10 2.24,10 0,7.76 0,5 Z"
+       copytype="single_stretched"
+       prop_scale="1"
+       scale_y_rel="false"
+       spacing="0"
+       normal_offset="0"
+       tang_offset="0"
+       prop_units="false"
+       vertical_pattern="false"
+       hide_knot="false"
+       fuse_tolerance="0" />
+  </defs>
   <sodipodi:namedview
      id="base"
      pagecolor="#ffffff"
@@ -23,9 +40,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.7"
-     inkscape:cx="1117.1709"
-     inkscape:cy="1362.6858"
+     inkscape:zoom="0.49497475"
+     inkscape:cx="186.72582"
+     inkscape:cy="189.11369"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      inkscape:document-rotation="0"
@@ -220,5 +237,27 @@
          d="m 1405.5234,941.79688 c -5.2927,-10e-6 -10.2332,1.97171 -14.4238,5.38085 l 25.8359,-2.11328 c -3.4759,-2.09199 -7.3378,-3.26757 -11.4121,-3.26757 z m 24.7286,20.41992 -50.7344,4.15234 c -0.9143,3.58863 -1.416,7.42366 -1.416,11.41602 0,19.87657 9.2444,37.77024 27.4218,35.99024 21.7341,-2.1283 27.42,-16.11367 27.42,-35.99024 0,-5.57733 -0.9661,-10.85651 -2.6914,-15.56836 z"
          transform="scale(0.26458333)" />
     </g>
+    <path
+       id="path889"
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:2.11667;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 148.92255,-89.277974 a 67.73333,67.73333 0 0 0 -67.733341,67.73333 67.73333,67.73333 0 0 0 67.733341,67.73334 67.73333,67.73333 0 0 0 67.73333,-67.73334 67.73333,67.73333 0 0 0 -67.73333,-67.73333 z m 0,16.93334 a 50.799999,50.799999 0 0 1 50.79999,50.79999 50.799999,50.799999 0 0 1 -50.79999,50.8 50.799999,50.799999 0 0 1 -50.800001,-50.8 50.799999,50.799999 0 0 1 50.800001,-50.79999 z"
+       inkscape:export-filename="C:\Repos\official github\Cyclops-VR\CyclopsVR\Assets\Graphics\Reticle.png"
+       inkscape:export-xdpi="133.91"
+       inkscape:export-ydpi="133.91" />
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 162.52976,-20.78869 -6.80357,7.181547 4.53571,2.267857 -6.42559,15.1190478 c 0,0 7.54846,7.7529312 12.47321,7.9375002 3.9993,0.149885 7.48968,-3.1307101 10.58334,-5.669643 5.6739,-4.6565172 11.07574,-10.2700934 13.98511,-17.008928 2.3662,-5.480715 4.62755,-12.281362 2.26786,-17.764881 -1.60375,-3.726838 -5.87972,-6.244875 -9.82738,-7.181549 -4.47406,-1.061576 -9.87682,-0.420802 -13.60714,2.267858 -1.96605,1.417049 -3.40179,6.425596 -3.40179,6.425596 l -4.15774,-1.511905 -0.75595,2.645833 12.85119,6.047619 -1.13393,2.267857 -12.28422,-6.614583 -0.75596,2.645833 z"
+       id="path891"
+       sodipodi:nodetypes="ccccsssssscccccccc"
+       inkscape:export-filename="C:\Repos\official github\Cyclops-VR\CyclopsVR\Assets\Graphics\Icon_Battle.png"
+       inkscape:export-xdpi="134.62009"
+       inkscape:export-ydpi="134.62009" />
+    <path
+       style="fill:#ffffff;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1"
+       d="m 154.0253,-31.938989 -34.39584,-23.62351 -8.50446,13.796131 40.06547,12.662202 -7.74851,4.724702 4.91369,0.188988 -8.50446,13.040179 17.57589,-16.252977 5.66964,-17.197916 -5.85863,12.473215 -1.88988,-8.12649 z"
+       id="path898"
+       inkscape:export-filename="C:\Repos\official github\Cyclops-VR\CyclopsVR\Assets\Graphics\Icon_Battle.png"
+       inkscape:export-xdpi="134.62009"
+       inkscape:export-ydpi="134.62009" />
   </g>
 </svg>

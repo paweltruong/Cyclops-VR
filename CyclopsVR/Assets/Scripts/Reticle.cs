@@ -77,6 +77,7 @@ public class Reticle : MonoBehaviour
     /// <param name="newTarget"></param>
     private void HandleRays(bool physicRayResult, Interactable newTarget)
     {
+        string hrUseCase = "";
         if (lastTarget != newTarget)
             targetAquired = false;//target will change
         //stop focusing on target
@@ -84,11 +85,13 @@ public class Reticle : MonoBehaviour
         {
             if (lastUIElement != null)
             {
+                hrUseCase += "1a";
                 //if UI is still focused even if interactable object is not targeted any more
                 //dont hide - do nothing
             }
             else
             {
+                hrUseCase += "1b";
                 //hide menu
                 //shrink
                 HideUIAndSelectionDelayed();
@@ -97,6 +100,7 @@ public class Reticle : MonoBehaviour
         //new target focused
         if (!targetAquired && physicRayResult)
         {
+            hrUseCase += "2";
             targetAquired = true;
             lastTargetCache = lastTarget = newTarget;
             if (lastTarget != null)
@@ -109,6 +113,7 @@ public class Reticle : MonoBehaviour
         //when lost focus but user returned to UI that not yet dissapeared
         if (!targetAquired && !physicRayResult && lastUIElement != null)
         {
+            hrUseCase += "3";
             //Debug.Log($"Keep UI: {lastTargetCache}");
             //still foucused on UI element
             lastUIElement?.Select(null);
@@ -118,9 +123,11 @@ public class Reticle : MonoBehaviour
         //hide if nothing is targeted
         if (!targetAquired && !physicRayResult && lastUIElement == null)
         {
+            hrUseCase += "4";
             //Debug.Log("Hide delayed");
             HideUIAndSelectionDelayed();
         }
+        Debug.Log($"HRUC:{hrUseCase}");
     }
 
     private void CastPhysicRay( out bool result)
